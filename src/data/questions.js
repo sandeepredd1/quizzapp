@@ -1,849 +1,1171 @@
 export const examConfig = {
-  appName: "Sweetyexam",
-  examName: "CLAT UG - Advanced Practice Test",
-  description: "Challenge yourself with 50  CLAT UG questions.",
-  passingPercentage: 40,
+  appName: "UPSC EXAM",
+  examName: "UPSC CSE Prelims - Mock Test",
+  description: "50 UPSC Prelims-style questions across Polity, History, Geography, Economy, Environment, Science and Tech, and IR/Governance.",
+  passingPercentage: 35,
   marksPerCorrect: 1,
   negativeMarks: 0.25,
   marksPerSkipped: 0,
   durationMinutes: 60,
 };
 
+
+
+
+
+
+const AR_OPTIONS = [
+  "Both A and R are individually true, and R is the correct explanation of A",
+  "Both A and R are individually true, but R is not the correct explanation of A",
+  "A is true, but R is false",
+  "A is false, but R is true",
+];
+
 export const questions = [
-  // =====================================================
-  // SECTION 1: ENGLISH LANGUAGE (1-10)
-  // =====================================================
+  // ==========================================
+  // 1–10: INDIAN POLITY
+  // ==========================================
   {
     id: 1,
-    section: "English Language",
-    passage:
-      "Democratic societies often equate the freedom to speak with the freedom to be heard. Yet the distribution of attention is rarely equal. Platforms may formally permit everyone to publish while algorithms, advertising incentives and existing inequalities determine whose speech reaches an audience. The problem is therefore not necessarily censorship in its traditional form, but the unequal architecture through which speech becomes influential.",
-    question: "Which statement best captures the central argument of the passage?",
+    section: "Indian Polity",
+    question: `With reference to the judicial limits on Parliament's amending power, consider the following statements:
+
+1. In Minerva Mills (1980), the Supreme Court held that Parliament's limited power to amend the Constitution is itself part of the basic structure.
+2. Clauses (4) and (5) inserted in Article 368 by the 42nd Amendment were struck down.
+3. In Waman Rao (1981), the Court held that laws placed in the Ninth Schedule after 24 April 1973 are open to basic structure review.
+4. In I.R. Coelho (2007), the Court held that laws placed in the Ninth Schedule after 24 April 1973 are completely immune from judicial review.
+
+Which of the statements given above are correct?`,
     options: [
-      "Democracy requires governments to approve every public statement.",
-      "Formal freedom to speak does not guarantee equal access to public attention.",
-      "Digital platforms have eliminated traditional censorship completely.",
-      "Advertising is incompatible with every democratic institution.",
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The passage distinguishes the right to publish from the unequal distribution of attention and influence.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. I.R. Coelho (2007) held the opposite of statement 4: Ninth Schedule laws enacted after 24 April 1973 can be tested against Fundamental Rights and the basic structure."
   },
+
   {
     id: 2,
-    section: "English Language",
-    passage:
-      "A historian who treats an archive as a transparent window into the past overlooks the circumstances of its creation. Records survive because institutions preserve some materials and neglect others. The absence of a document may indicate that an event never occurred, but it may equally reveal whose experiences were considered unworthy of recording.",
-    question: "Which inference is most strongly supported?",
+    section: "Indian Polity",
+    question: `Consider the following statements regarding the Tenth Schedule (anti-defection law):
+
+1. In Kihoto Hollohan (1992), the Supreme Court held Paragraph 7 invalid for want of ratification by States while upholding the rest of the Schedule.
+2. An independent member elected to a House who joins a political party after the election is liable to disqualification.
+3. A nominated member may join a political party within six months of taking his seat without incurring disqualification.
+4. Decisions of the Presiding Officer under the Tenth Schedule are completely immune from judicial review.
+
+Which of the statements given above are correct?`,
     options: [
-      "Every missing document proves deliberate historical suppression.",
-      "Official archives contain no reliable historical information.",
-      "Historians should consider how preservation practices shape the evidence available.",
-      "Only oral testimony can establish historical truth.",
+      "1 and 2 only",
+      "1, 3 and 4 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
     ],
     answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The passage asks historians to examine the selection and preservation of records rather than treating archives as neutral.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. Kihoto Hollohan held the Presiding Officer's decision is subject to limited judicial review (for example, for mala fides or perversity), so statement 4 is incorrect."
   },
+
   {
     id: 3,
-    section: "English Language",
-    passage:
-      "Technological efficiency is often measured by the speed with which a task is completed. Such a measure can conceal costs transferred elsewhere: a faster delivery system may increase traffic, a cheaper product may depend on precarious labour, and an automated process may shift the burden of error onto consumers. Efficiency is therefore meaningful only when the boundaries of measurement are made explicit.",
-    question: "What does the author mean by making the boundaries of measurement explicit?",
+    section: "Indian Polity",
+    question: `With reference to Article 356 and the S.R. Bommai judgment (1994), consider the following statements:
+
+1. A Proclamation of President's Rule is subject to judicial review.
+2. The State Legislative Assembly should not be dissolved until Parliament approves the Proclamation.
+3. Secularism was treated as part of the basic structure of the Constitution.
+4. Once approved by both Houses, a Proclamation under Article 356 continues for one year at a stretch.
+
+Which of the statements given above are correct?`,
     options: [
-      "Measuring only the time taken to complete a task.",
-      "Rejecting efficiency as a useful economic concept.",
-      "Assuming that lower prices always benefit society.",
-      "Identifying which costs and consequences are included in the evaluation.",
+      "1 and 3 only",
+      "1, 2 and 3 only",
+      "2 and 4 only",
+      "1, 2, 3 and 4",
     ],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The author argues that efficiency calculations must account for costs transferred to other people or places.",
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. Once approved, a Proclamation continues for six months at a time (extendable in six-month steps, subject to the limits in Article 356(5)), not one year at a stretch."
   },
+
   {
     id: 4,
-    section: "English Language",
-    passage:
-      "Public trust is not secured merely by institutions claiming to act in the public interest. Trust becomes durable when decisions can be examined, reasons can be challenged, and mistakes can be corrected. Transparency without accountability may simply make institutional failure more visible without making it less likely.",
-    question: "Which distinction is central to the passage?",
+    section: "Indian Polity",
+    question: `Consider the following statements about Parliamentary Committees:
+
+1. The Public Accounts Committee consists of 22 members: 15 from the Lok Sabha and 7 from the Rajya Sabha.
+2. By constitutional mandate, the Chairman of the Public Accounts Committee must belong to the ruling party.
+3. The Estimates Committee consists exclusively of members of the Lok Sabha.
+4. The Committee on Public Undertakings has 22 members: 15 from the Lok Sabha and 7 from the Rajya Sabha.
+
+How many of the statements given above are correct?`,
     options: [
-      "Transparency reveals decisions, while accountability creates mechanisms for scrutiny and correction.",
-      "Trust depends exclusively on secrecy.",
-      "Public institutions should never explain their decisions.",
-      "Mistakes automatically disappear when information is published.",
+      "Only one",
+      "Only two",
+      "Only three",
+      "All four",
     ],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The passage treats transparency and accountability as related but distinct; disclosure alone may not correct failures.",
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. Statement 2 is incorrect: there is no constitutional mandate, and by convention (since 1967) the PAC Chairman is appointed from the Opposition."
   },
+
   {
     id: 5,
-    section: "English Language",
-    passage:
-      "Language changes through use rather than by remaining permanently fixed. However, this does not mean that every expression is equally suitable in every setting. A phrase that signals solidarity within a community may appear discourteous in a formal hearing. Linguistic competence therefore involves understanding not only grammar but also context, audience and purpose.",
-    question: "Which assumption underlies the author's argument?",
+    section: "Indian Polity",
+    question: `With reference to the removal of the Vice-President of India, consider the following statements:
+
+1. A resolution for removal can be moved only in the Rajya Sabha, after at least 14 days' notice.
+2. The resolution must be passed by a majority of all the then members of the Rajya Sabha.
+3. The Lok Sabha must agree to the resolution by a two-thirds majority of members present and voting.
+4. While acting as President, the Vice-President continues to perform the duties of the Chairman of the Rajya Sabha.
+
+Which of the statements given above are correct?`,
     options: [
-      "Grammar has no role in communication.",
-      "A single style of speech is appropriate for every audience.",
-      "Effective communication requires sensitivity to social context.",
-      "Language change should be prohibited in formal institutions.",
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "2 and 3 only",
+      "3 and 4 only",
     ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The examples imply that communicative success depends partly on adapting language to context and audience.",
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 2 are correct. Under Article 67(b), the Lok Sabha only needs to agree by a simple majority. Under Article 65(2), the Vice-President acting as President does not perform the duties of Chairman of the Rajya Sabha."
   },
+
   {
     id: 6,
-    section: "English Language",
-    passage:
-      "A policy can be popular without being effective, just as an effective policy can initially be unpopular. Public approval measures attitudes at a particular moment; effectiveness requires evidence about whether stated objectives were achieved. Confusing the two allows political convenience to substitute for evaluation.",
-    question: "The word 'substitute' most nearly means:",
+    section: "Indian Polity",
+    question: `Consider the following statements regarding delimitation and representation:
+
+1. The 42nd Amendment (1976) froze the inter-State allocation of Lok Sabha seats on the basis of the 1971 Census until the year 2000.
+2. The 84th Amendment (2001) extended this freeze until the first Census taken after 2026.
+3. The 87th Amendment (2003) provided for readjusting constituency boundaries on the basis of the 2001 Census without changing the number of seats allocated to each State.
+4. The 106th Amendment (2023) provides that reservation for women in the Lok Sabha and State Assemblies will operate only after a delimitation exercise undertaken after the first relevant Census following its commencement.
+
+Which of the statements given above are correct?`,
     options: [
-      "Investigate",
-      "Replace",
-      "Measure",
-      "Postpone",
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
     ],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Here, political convenience is said to replace proper evaluation of policy outcomes.",
+    answer: 3,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "All four statements are correct and trace the constitutional history of the freeze on seat allocation and the conditional operation of women's reservation."
   },
+
   {
     id: 7,
-    section: "English Language",
-    passage:
-      "Scientific uncertainty is sometimes presented as a reason to delay action. Yet uncertainty does not imply that all outcomes are equally probable or that no evidence exists. Where the potential harm is severe and difficult to reverse, uncertainty may strengthen the case for proportionate precaution rather than justify inaction.",
-    question: "Which statement would the author most likely reject?",
-    options: [
-      "The severity of possible harm can matter when deciding how to respond.",
-      "Scientific evidence can support action even when uncertainty remains.",
-      "Precaution should be proportionate to the circumstances.",
-      "Any uncertainty proves that action is irrational.",
-    ],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The passage explicitly rejects the idea that uncertainty automatically requires inaction.",
+    section: "Indian Polity",
+    question: `Consider the following Assertion (A) and Reason (R):
+
+Assertion (A): A law made after the commencement of the Constitution that violates a Fundamental Right is void ab initio and is not revived merely because the inconsistency is later removed by a constitutional amendment.
+
+Reason (R): A pre-Constitution law inconsistent with a Fundamental Right is only overshadowed (eclipsed) by the right and becomes enforceable again once the inconsistency is removed.
+
+Which one of the following is correct?`,
+    options: AR_OPTIONS,
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Both statements are true (Deep Chand for post-Constitution laws; Bhikaji Narain Dhakras for the doctrine of eclipse on pre-Constitution laws). However, R contrasts the position of pre-Constitution laws and does not explain why post-Constitution laws are void ab initio."
   },
+
   {
     id: 8,
-    section: "English Language",
-    passage:
-      "An institution may satisfy every formal reporting requirement and still fail to communicate meaningfully. A hundred pages of technical disclosure can obscure more than a concise explanation of the same decision. Information becomes useful when its organisation allows the intended audience to understand and assess it.",
-    question: "Which option best describes the author's view of disclosure?",
+    section: "Indian Polity",
+    question: `With reference to inter-State relations in India, consider the following statements:
+
+1. Article 262 empowers Parliament to provide by law for the adjudication of disputes relating to waters of inter-State rivers.
+2. Parliament may by law exclude the jurisdiction of the Supreme Court and other courts over such water disputes.
+3. Under Article 263, the President may by order establish an Inter-State Council if it appears that public interests would be served.
+4. Article 262 itself constitutes the Water Disputes Tribunals without the need for any parliamentary law.
+
+Which of the statements given above are correct?`,
     options: [
-      "The volume of information alone does not guarantee meaningful understanding.",
-      "Technical reports should always be prohibited.",
-      "Concise explanations are necessarily inaccurate.",
-      "Institutions should disclose information only to experts.",
+      "1, 2 and 3 only",
+      "1 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
     ],
     answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The passage distinguishes the quantity of disclosed information from its accessibility and usefulness.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. Tribunals are created under a parliamentary law (the Inter-State River Water Disputes Act, 1956), not directly by Article 262."
   },
+
   {
     id: 9,
-    section: "English Language",
-    passage:
-      "Markets aggregate individual choices, but those choices are made under different conditions. A consumer who declines an essential service because it is unaffordable has not expressed the same preference as a consumer who declines it despite being able to pay. Observed demand therefore cannot always be interpreted as a direct measure of social need.",
-    question: "Which inference follows from the passage?",
+    section: "Indian Polity",
+    question: `Consider the following pairs:
+
+1. Shankari Prasad (1951) — Constitutional amendments are not "law" under Article 13
+2. Golaknath (1967) — A constitutional amendment is "law" under Article 13(2)
+3. Minerva Mills (1980) — Upheld the validity of Article 368(4) inserted by the 42nd Amendment
+4. Kesavananda Bharati (1973) — Upheld Golaknath's holding that Parliament cannot amend Fundamental Rights
+
+How many of the pairs given above are correctly matched?`,
     options: [
-      "Markets never provide useful information.",
-      "Every essential service must be free.",
-      "Observed purchasing behaviour may reflect constraints as well as preferences.",
-      "Consumers cannot make rational choices.",
+      "Only one",
+      "Only two",
+      "Only three",
+      "All four",
     ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The passage explains that affordability constraints affect observed demand, so behaviour alone may not reveal underlying need.",
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Only pairs 1 and 2 are correct. Minerva Mills struck down Article 368(4), and Kesavananda Bharati overruled Golaknath, holding that Parliament can amend Fundamental Rights but not the basic structure."
   },
+
   {
     id: 10,
-    section: "English Language",
-    passage:
-      "The strongest criticism of a policy is not necessarily the one expressed most forcefully. A persuasive critique identifies the policy's objective, examines the evidence for its methods and explains where the reasoning fails. Rhetorical intensity may attract attention, but it cannot replace a defensible argument.",
-    question: "Which quality does the author consider essential to a strong critique?",
+    section: "Indian Polity",
+    question: `With reference to the Legislative Councils of States, consider the following statements:
+
+1. Parliament may by law create or abolish a Legislative Council if the Legislative Assembly passes a resolution by the special majority prescribed in Article 169.
+2. Such a law is deemed to be an amendment of the Constitution for the purposes of Article 368.
+3. One-sixth of the members of a Legislative Council are nominated by the Governor.
+4. The strength of a Legislative Council cannot exceed one-third of the strength of the Legislative Assembly and cannot be less than 40, subject to exceptions.
+
+Which of the statements given above are correct?`,
     options: [
-      "Personal attacks on the policy's supporters.",
-      "A reasoned examination of objectives, evidence and logic.",
-      "The use of the greatest possible number of words.",
-      "Agreement with the majority opinion.",
+      "1 and 3 only",
+      "1, 3 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2 and 4 only",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The author prioritises evidence and reasoning over forceful rhetoric.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. Under Article 169(3), a law creating or abolishing a Council is not deemed an amendment of the Constitution for the purposes of Article 368."
   },
 
-  // =====================================================
-  // SECTION 2: GENERAL KNOWLEDGE & LEGAL AWARENESS (11-20)
-  // =====================================================
+  // ==========================================
+  // 11–20: HISTORY, ART AND CULTURE
+  // ==========================================
   {
     id: 11,
-    section: "GK & Legal Awareness",
-    question:
-      "Which constitutional provision establishes the Supreme Court of India?",
+    section: "Ancient Indian History",
+    question: `Consider the following statements about the Harappan civilisation:
+
+1. Dholavira in Gujarat is notable for its elaborate system of water conservation and reservoirs.
+2. Rakhigarhi in Haryana is among the largest Harappan sites in the subcontinent.
+3. Kalibangan has yielded evidence of a ploughed field and fire altars.
+4. The Harappan script has been conclusively deciphered with the help of a bilingual inscription.
+
+Which of the statements given above are correct?`,
     options: [
-      "Article 124",
-      "Article 32",
-      "Article 226",
-      "Article 368",
+      "1, 2, 3 and 4",
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "3 and 4 only",
     ],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Article 124 provides for the establishment and constitution of the Supreme Court.",
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. The Harappan script remains undeciphered and no accepted bilingual inscription has been found."
   },
+
   {
     id: 12,
-    section: "GK & Legal Awareness",
-    question:
-      "Which writ is ordinarily used to challenge the legality of a person's detention?",
+    section: "Ancient Indian History",
+    question: `Consider the following pairs of Buddhist Councils with their place and patron:
+
+1. First Council — Rajagriha — Ajatashatru
+2. Second Council — Vaishali — Kalasoka
+3. Third Council — Pataliputra — Kanishka
+4. Fourth Council — Kundalvana (Kashmir) — Kanishka
+
+Which one of the pairs given above is NOT correctly matched?`,
     options: [
-      "Mandamus",
-      "Certiorari",
-      "Habeas corpus",
-      "Quo warranto",
+      "1",
+      "2",
+      "3",
+      "4",
     ],
     answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Habeas corpus requires the legality of detention to be examined by a competent court.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "The Third Buddhist Council at Pataliputra was patronised by Ashoka (presided over by Moggaliputta Tissa), not Kanishka."
   },
+
   {
     id: 13,
-    section: "GK & Legal Awareness",
-    question:
-      "Which part of the Indian Constitution contains the Directive Principles of State Policy?",
+    section: "Medieval Indian History",
+    question: `Consider the following statements about early temple architecture in India:
+
+1. The Shore Temple at Mamallapuram is a structural temple built under Pallava rule.
+2. The Kailasa temple at Ellora was carved out of rock under the Rashtrakuta ruler Krishna I.
+3. The Brihadisvara temple at Gangaikondacholapuram was built by Rajaraja I.
+4. The Virupaksha temple at Pattadakal was built under the Chalukyas of Badami.
+
+Which of the statements given above are correct?`,
     options: [
-      "Part II",
-      "Part IV",
-      "Part III",
-      "Part IVA",
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The Directive Principles of State Policy are contained in Part IV, Articles 36–51.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. The Gangaikondacholapuram temple was built by Rajendra I, whereas the Brihadisvara temple at Thanjavur was built by Rajaraja I."
   },
+
   {
     id: 14,
-    section: "GK & Legal Awareness",
-    question:
-      "Which constitutional amendment introduced the words 'Socialist', 'Secular' and 'Integrity' into the Preamble?",
+    section: "Medieval Indian History",
+    question: `With reference to the Vijayanagara Empire, consider the following statements:
+
+1. Krishnadevaraya's work Amuktamalyada was composed in Telugu.
+2. The Battle of Talikota was fought in 1526 between Vijayanagara and the Bahmani Sultanate.
+3. Under the Nayankara system, military chiefs held territories in return for military service to the king.
+4. The Portuguese traveller Domingo Paes visited the empire during the reign of Achyutadevaraya.
+
+Which of the statements given above are correct?`,
     options: [
-      "24th Amendment",
-      "42nd Amendment",
-      "44th Amendment",
-      "52nd Amendment",
+      "1 and 3 only",
+      "1, 2 and 3 only",
+      "2 and 4 only",
+      "1, 3 and 4 only",
     ],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The 42nd Constitutional Amendment Act, 1976 added these words to the Preamble.",
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 3 are correct. The Battle of Talikota was fought in 1565 against a coalition of Deccan Sultanates, and Domingo Paes visited during Krishnadevaraya's reign."
   },
+
   {
     id: 15,
-    section: "GK & Legal Awareness",
-    question:
-      "The basic structure doctrine is most closely associated with which case?",
+    section: "Medieval Indian History",
+    question: `Consider the following statements about the Mughal revenue and administrative system:
+
+1. Todar Mal's Dahsala system fixed revenue rates on the basis of average produce and prices over the preceding ten years.
+2. Under the Mansabdari system, zat indicated personal rank and pay, while sawar indicated the number of cavalrymen to be maintained.
+3. Mansabs were hereditary and passed automatically to the mansabdar's sons.
+4. Jagirs were generally transferable to prevent mansabdars from developing local roots.
+
+Which of the statements given above are correct?`,
     options: [
-      "Maneka Gandhi v. Union of India",
-      "Golaknath v. State of Punjab",
-      "Kesavananda Bharati v. State of Kerala",
-      "A.K. Gopalan v. State of Madras",
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
     ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The 1973 Kesavananda Bharati decision established that Parliament cannot destroy the Constitution's basic structure.",
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Mansabs were not hereditary; the emperor decided appointments and promotions."
   },
+
   {
     id: 16,
-    section: "GK & Legal Awareness",
-    question:
-      "Which body recommends the distribution of certain tax revenues between the Union and the States?",
+    section: "Modern Indian History",
+    question: `Consider the following events of the 1930s:
+
+1. Third Round Table Conference
+2. Gandhi–Irwin Pact
+3. Poona Pact
+4. Communal Award
+
+Which one of the following is the correct chronological sequence of these events (earliest first)?`,
     options: [
-      "Election Commission",
-      "Finance Commission",
-      "Union Public Service Commission",
-      "National Human Rights Commission",
+      "2-3-4-1",
+      "2-4-3-1",
+      "4-2-3-1",
+      "2-4-1-3",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The Finance Commission, constituted under Article 280, recommends tax devolution and related fiscal arrangements.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Gandhi–Irwin Pact (March 1931) → Communal Award (August 1932) → Poona Pact (September 1932) → Third Round Table Conference (November–December 1932)."
   },
+
   {
     id: 17,
-    section: "GK & Legal Awareness",
-    question:
-      "Which institution is the principal judicial organ of the United Nations?",
+    section: "Modern Indian History",
+    question: `With reference to the Cabinet Mission (1946), consider the following statements:
+
+1. It proposed a Union with three subjects (defence, foreign affairs and communications) and a grouping of provinces into sections.
+2. The Constituent Assembly was to be indirectly elected by the provincial legislative assemblies.
+3. It accepted the demand for a separate sovereign Pakistan.
+4. It proposed that British paramountcy over the princely states would be transferred to the Union government.
+
+Which of the statements given above are correct?`,
     options: [
-      "International Court of Justice",
-      "International Criminal Court",
-      "UN Security Council",
-      "International Law Commission",
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1 and 4 only",
     ],
     answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The International Court of Justice is the principal judicial organ of the United Nations.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 2 are correct. The Mission rejected a separate sovereign Pakistan, and it stated that paramountcy would lapse on independence and would not be transferred to the new government."
   },
+
   {
     id: 18,
-    section: "GK & Legal Awareness",
-    question:
-      "Which constitutional article guarantees equality before the law and equal protection of the laws?",
+    section: "Modern Indian History",
+    question: `Consider the following pairs of uprisings and leaders:
+
+1. Kol Uprising (1831–32) — Buddhu Bhagat
+2. Anglo-Khasi War — U Tirot Sing
+3. Paika Rebellion (1817) — Bakshi Jagabandhu
+4. Pagal Panthi movement — Karam Shah and Tipu Shah
+
+How many of the pairs given above are correctly matched?`,
     options: [
-      "Article 14",
-      "Article 19",
-      "Article 21A",
-      "Article 25",
+      "Only one",
+      "Only two",
+      "Only three",
+      "All four",
     ],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Article 14 guarantees equality before the law and equal protection of the laws.",
+    answer: 3,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "All four pairs are correctly matched."
   },
+
   {
     id: 19,
-    section: "GK & Legal Awareness",
-    question:
-      "Which Indian authority audits the accounts of the Union and State governments under the constitutional framework?",
+    section: "Art and Culture",
+    question: `Consider the following statements about Indian classical dance traditions:
+
+1. Sattriya was recognised as a classical dance by the Sangeet Natak Akademi in 2000.
+2. Chhau is recognised as one of the classical dance forms by the Sangeet Natak Akademi.
+3. Kathak absorbed Persian influences in the Mughal period and has gharanas such as Jaipur, Lucknow and Banaras.
+4. The Tanjore Quartet systematised the repertoire (margam) of Bharatanatyam.
+
+Which of the statements given above are correct?`,
     options: [
-      "Attorney General of India",
-      "Comptroller and Auditor General of India",
-      "Chief Election Commissioner",
-      "Finance Secretary",
+      "1 and 3 only",
+      "1, 3 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2 and 4 only",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The Comptroller and Auditor General of India performs constitutionally prescribed audit functions.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. Chhau is a traditional folk/martial-influenced dance form and is not among the eight classical dances recognised by the Sangeet Natak Akademi."
   },
+
   {
     id: 20,
-    section: "GK & Legal Awareness",
-    question:
-      "Which schedule of the Constitution contains the allocation of seats in the Council of States?",
+    section: "Art and Culture",
+    question: `Consider the following statements about UNESCO World Heritage inscriptions from India:
+
+1. Dholavira was inscribed as a World Heritage Site in 2021.
+2. The Rudreshwara (Ramappa) Temple was inscribed in 2021.
+3. Santiniketan was inscribed in 2024.
+4. The Moidams of Charaideo (Assam) were inscribed in 2024.
+
+Which of the statements given above are correct?`,
     options: [
-      "First Schedule",
-      "Third Schedule",
-      "Fourth Schedule",
-      "Seventh Schedule",
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
     ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The Fourth Schedule deals with the allocation of seats in the Council of States (Rajya Sabha).",
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Santiniketan was inscribed in 2023, not 2024."
   },
 
-  // =====================================================
-  // SECTION 3: LEGAL REASONING (21-30)
-  // Apply the stated principle to the given facts.
-  // =====================================================
+  // ==========================================
+  // 21–28: GEOGRAPHY
+  // ==========================================
   {
     id: 21,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A person is negligent when they owe a duty of reasonable care, breach that duty, and thereby cause foreseeable harm. A person is not automatically liable for every accident occurring nearby.",
-    question:
-      "A shopkeeper leaves a slippery liquid on a busy entrance floor despite seeing it. A customer slips on it and breaks an arm. Which is the strongest conclusion?",
-    options: [
-      "The shopkeeper can never be liable because the customer entered voluntarily.",
-      "The shopkeeper may be negligent because the danger was foreseeable and left unaddressed.",
-      "The shopkeeper is liable even if the liquid was placed there after the accident.",
-      "The customer is automatically responsible for every injury on commercial premises.",
-    ],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The shopkeeper knew of a foreseeable hazard and failed to take reasonable precautions, supporting negligence on these facts.",
+    section: "Geography",
+    question: `Consider the following Assertion (A) and Reason (R):
+
+Assertion (A): Western disturbances bring winter rainfall to north-western India that benefits Rabi crops such as wheat.
+
+Reason (R): Western disturbances are extratropical cyclonic systems that originate in the Mediterranean region and are steered eastwards by the subtropical westerly jet stream.
+
+Which one of the following is correct?`,
+    options: AR_OPTIONS,
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Both statements are true and R correctly explains how the moisture-bearing systems reach north-western India."
   },
+
   {
     id: 22,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: An offer may be revoked before acceptance is complete against the offeror, provided the revocation is effectively communicated in time under the applicable rules.",
-    question:
-      "A offers to sell a laptop to B. Before B communicates acceptance, A tells B that the offer is withdrawn. B then attempts to accept the original offer. Which conclusion best follows?",
+    section: "Geography",
+    question: `Consider the following statements about Indian Ocean and Pacific climate phenomena:
+
+1. The Somali Current reverses its direction seasonally with the monsoon winds.
+2. During a positive Indian Ocean Dipole, sea surface temperatures are cooler than normal in the western Indian Ocean and warmer in the east.
+3. During El Niño, the Walker circulation over the Pacific strengthens.
+4. A positive Indian Ocean Dipole is generally associated with enhanced Indian monsoon rainfall and can offset the effect of El Niño.
+
+Which of the statements given above are correct?`,
     options: [
-      "B can always accept because every offer remains open for seven days.",
-      "The offer is automatically irrevocable once its price is stated.",
-      "B's attempted acceptance is ineffective if the revocation was validly communicated first.",
-      "A must sell because B has already considered the offer.",
+      "1 and 4 only",
+      "1, 2 and 4 only",
+      "2 and 3 only",
+      "1, 3 and 4 only",
     ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Under the stated principle, timely and effective revocation before acceptance prevents formation of the contract.",
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 4 are correct. In a positive IOD the western Indian Ocean is warmer and the eastern cooler, and El Niño is associated with a weakening of the Walker circulation."
   },
+
   {
     id: 23,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: Consent obtained through a material misrepresentation may be defective. A statement must be assessed in context, including whether it was presented as fact and whether it materially induced the other party's decision.",
-    question:
-      "A seller knowingly states that a used car has never been in an accident. The buyer relies on the statement to purchase it. The car had suffered major collision damage. Which conclusion is strongest?",
+    section: "Geography",
+    question: `Consider the following statements about the Himalayas:
+
+1. The Siwalik is the youngest and outermost Himalayan range, composed largely of unconsolidated sediments.
+2. Duns are longitudinal valleys lying between the Lesser Himalaya and the Siwaliks.
+3. Karewas are lacustrine deposits found in the Kashmir Valley.
+4. The Himadri (Greater Himalaya) has a core of granite and crystalline rocks and contains the highest peaks.
+
+Which of the statements given above are correct?`,
     options: [
-      "The statement may amount to material misrepresentation affecting the buyer's consent.",
-      "The statement is irrelevant because the buyer could have inspected the car.",
-      "Every inaccurate statement automatically constitutes a criminal offence.",
-      "The buyer can never seek a remedy after completing a purchase.",
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
     ],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The seller knowingly made a false factual statement that materially induced the purchase.",
+    answer: 3,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "All four statements are correct."
   },
+
   {
     id: 24,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A restriction on a constitutional freedom must be assessed against the constitutional text and applicable legal tests. A restriction is not valid merely because an authority describes it as desirable.",
-    question:
-      "A local authority prohibits every peaceful public meeting indefinitely, citing administrative convenience without identifying a specific legal basis. Which conclusion is most defensible?",
+    section: "Geography",
+    question: `Consider the following statements regarding jet streams:
+
+1. The northward shift of the subtropical westerly jet stream in early summer is associated with the onset of the Indian monsoon.
+2. The Tropical Easterly Jet is a winter phenomenon over India.
+3. Jet streams are narrow bands of very strong winds located near the tropopause.
+4. The subtropical westerly jet stream blows from east to west.
+
+Which of the statements given above are correct?`,
     options: [
-      "The prohibition is valid whenever an authority invokes convenience.",
-      "Peaceful meetings can never be regulated in any circumstances.",
-      "Administrative convenience automatically overrides fundamental rights.",
-      "The blanket prohibition requires constitutional and legal justification and may be invalid.",
+      "1, 2 and 3 only",
+      "2 and 4 only",
+      "1 and 3 only",
+      "1, 3 and 4 only",
     ],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "A blanket restriction cannot be justified merely by assertion; its legal basis and constitutional validity must be examined.",
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 3 are correct. The Tropical Easterly Jet is a summer phenomenon associated with the monsoon, and westerly jets blow from west to east."
   },
+
   {
     id: 25,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: Criminal liability generally requires proof of the prohibited conduct and the mental element specified by the applicable offence. Where an offence expressly requires knowledge, mere accidental conduct without such knowledge may not satisfy that element.",
-    question:
-      "A courier unknowingly transports a sealed package containing prohibited goods. The offence expressly requires knowledge of the contents, and the facts establish that the courier had no such knowledge. Under the stated principle, what follows?",
+    section: "Geography",
+    question: `Consider the following statements about landforms:
+
+1. Uvalas are formed by the coalescence of several sinkholes in karst regions.
+2. Zeugen are table-like rock masses with a resistant cap rock, sculpted by wind abrasion.
+3. Yardangs are streamlined ridges aligned with the prevailing wind, formed by abrasion.
+4. Inselbergs are depositional features of arid regions formed by wind-borne sand.
+
+Which of the statements given above are correct?`,
     options: [
-      "The courier is guilty because possession always proves knowledge.",
-      "The required mental element may be absent, so guilt under this offence is not established by these facts alone.",
-      "The courier must be convicted because the package was sealed.",
-      "Knowledge is irrelevant whenever goods cross a boundary.",
+      "1 and 2 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The stated offence requires knowledge, and the facts expressly negate that mental element.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. Inselbergs are isolated residual rock hills left by erosion, not depositional sand features."
   },
+
   {
     id: 26,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A person who voluntarily assumes a clearly disclosed risk may be restricted from claiming that the risk alone establishes another person's liability. This does not automatically excuse conduct that goes beyond the risk accepted.",
-    question:
-      "A participant signs up for a supervised climbing activity after being warned of ordinary climbing risks. An instructor ignores a visibly damaged safety rope, which then breaks. Which conclusion is strongest?",
+    section: "Geography",
+    question: `Consider the following pairs of mountain passes and the region in which they lie:
+
+1. Shipki La — Himachal Pradesh
+2. Lipulekh — Uttarakhand
+3. Bomdila — Arunachal Pradesh
+4. Nathu La — Arunachal Pradesh
+
+How many of the pairs given above are correctly matched?`,
     options: [
-      "The participant accepted every possible risk by signing the form.",
-      "The instructor can never owe a duty to participants.",
-      "Acceptance of ordinary climbing risks does not necessarily excuse failure to address a known equipment defect.",
-      "The warning makes the condition of safety equipment legally irrelevant.",
+      "Only one",
+      "Only two",
+      "Only three",
+      "All four",
     ],
     answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The principle distinguishes ordinary disclosed risks from negligence involving a known defect outside the risk reasonably accepted.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Pairs 1, 2 and 3 are correct. Nathu La is in Sikkim."
   },
+
   {
     id: 27,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A valid delegated rule must remain within the authority granted by its parent legislation. An administrative body cannot use delegated powers to contradict or substantially rewrite the governing statute.",
-    question:
-      "A statute authorises a board to set filing procedures. The board issues a rule creating an entirely new tax that the statute does not authorise. What is the best conclusion?",
+    section: "Geography",
+    question: `Consider the following statements about oceans:
+
+1. Surface salinity in the open ocean is highest at the equator because of intense evaporation.
+2. Spring tides occur around the new moon and full moon.
+3. Neap tides occur when the Sun and the Moon are at right angles to the Earth.
+4. The Baltic Sea has low salinity because of heavy river inflow, low evaporation and restricted connection to the open ocean.
+
+Which of the statements given above are correct?`,
     options: [
-      "The rule may be ultra vires because the board exceeded its delegated authority.",
-      "The rule is valid because all administrative bodies possess unlimited powers.",
-      "A tax is always valid if announced in a notification.",
-      "The parent statute becomes irrelevant once a rule is issued.",
+      "2 and 3 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
     ],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Delegated legislation must remain within the authority conferred by the parent statute.",
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 2, 3 and 4 are correct. Open-ocean salinity peaks in the subtropics, not at the equator, where heavy rainfall lowers it."
   },
+
   {
     id: 28,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A private nuisance may arise when a person's unreasonable use of property substantially interferes with another person's use or enjoyment of their property. The assessment considers factors such as duration, locality and seriousness.",
-    question:
-      "A factory emits extremely loud noise every night for months, seriously preventing neighbouring residents from sleeping. Which conclusion best follows?",
+    section: "Geography",
+    question: `Consider the following pairs of straits and the water bodies they connect:
+
+1. Palk Strait — Bay of Bengal and Arabian Sea
+2. Strait of Hormuz — Persian Gulf and Gulf of Oman
+3. Bab-el-Mandeb — Red Sea and Gulf of Aden
+4. Strait of Malacca — Andaman Sea and South China Sea
+
+Which one of the pairs given above is NOT correctly matched?`,
     options: [
-      "Noise can never amount to interference with property enjoyment.",
-      "Residents must move away whenever a factory operates nearby.",
-      "A factory's commercial purpose automatically defeats all claims.",
-      "The prolonged and serious interference may support a private nuisance claim.",
+      "1",
+      "2",
+      "3",
+      "4",
     ],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The duration and seriousness of the interference may make the factory's conduct an unreasonable use of property.",
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "The Palk Strait connects the Palk Bay (Bay of Bengal side) with the Gulf of Mannar; it does not connect the Bay of Bengal with the Arabian Sea."
   },
+
+  // ==========================================
+  // 29–36: INDIAN ECONOMY
+  // ==========================================
   {
     id: 29,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A principal may be bound by an agent's acts performed within actual authority or, in appropriate circumstances, apparent authority created by the principal's representations to a third party.",
-    question:
-      "A company publicly represents an employee as authorised to negotiate routine supply contracts. A supplier reasonably relies on that representation and enters a routine contract. The employee's internal authority was privately restricted. Which conclusion is strongest?",
+    section: "Indian Economy",
+    question: `Consider the following statements about India's monetary policy framework:
+
+1. The repo rate is the rate at which the RBI lends to banks against government securities as collateral.
+2. The Standing Deposit Facility (SDF) allows banks to park surplus liquidity with the RBI without collateral and forms the floor of the LAF corridor.
+3. The Marginal Standing Facility (MSF) rate is set below the repo rate.
+4. The Monetary Policy Committee has six members, and the Governor has a casting vote in case of a tie.
+
+Which of the statements given above are correct?`,
     options: [
-      "The company is never responsible for employee conduct.",
-      "The company may be bound if apparent authority is established under the principle.",
-      "The supplier is automatically liable for knowing every private company rule.",
-      "Private restrictions always defeat authority apparent to third parties.",
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
     ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The principal's own representation may create apparent authority on which a third party reasonably relies.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. The MSF rate is set above the repo rate and forms the upper bound of the policy corridor."
   },
+
   {
     id: 30,
-    section: "Legal Reasoning",
-    passage:
-      "Principle: A law that classifies people differently must satisfy the applicable equality standard. A classification is generally defensible when it is based on an intelligible differentia and that differentia has a rational connection with the law's objective.",
-    question:
-      "A scholarship is reserved for students from economically disadvantaged families to improve access to higher education. Which argument most strongly supports the classification?",
+    section: "Indian Economy",
+    question: `Consider the following statements about the Goods and Services Tax (GST):
+
+1. The GST Council is a constitutional body under Article 279A.
+2. Article 246A gives Parliament and State Legislatures concurrent power to make laws on GST.
+3. Decisions in the GST Council are taken by a simple majority of members present and voting.
+4. Alcohol for human consumption is currently subject to GST.
+
+Which of the statements given above are correct?`,
     options: [
-      "Every classification is unconstitutional.",
-      "The government may classify people for any reason whatsoever.",
-      "Economic disadvantage may be relevant to the objective of improving educational access, subject to the applicable equality test.",
-      "Scholarships can never use eligibility criteria.",
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "2 and 3 only",
+      "1, 3 and 4 only",
     ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The classification may have a rational connection with the stated objective, though its actual validity depends on the applicable legal test and facts.",
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 2 are correct. GST Council decisions need a three-fourths weighted majority (Centre one-third, States two-thirds of votes), and alcohol for human consumption is outside GST."
   },
 
-  // =====================================================
-  // SECTION 4: LOGICAL REASONING (31-40)
-  // =====================================================
   {
     id: 31,
-    section: "Logical Reasoning",
-    question:
-      "All constitutional amendments are laws. Some laws are challenged in court. Which conclusion necessarily follows?",
+    section: "Indian Economy",
+    question: `Consider the following statements regarding government funds in India:
+
+1. The Contingency Fund of India is established under Article 267 and is placed at the disposal of the President.
+2. All revenues received by the Union Government and loans raised by it form part of the Consolidated Fund of India.
+3. Money can be withdrawn from the Public Account of India only after a prior Appropriation Act is passed.
+4. Expenditure charged on the Consolidated Fund is not submitted to the vote of Parliament, although it can be discussed.
+
+Which of the statements given above are correct?`,
     options: [
-      "All constitutional amendments are challenged in court.",
-      "Some constitutional amendments are challenged in court.",
-      "No constitutional amendment is challenged in court.",
-      "None of the above conclusions necessarily follows.",
-    ],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The laws challenged in court may or may not include constitutional amendments. The premises do not establish a necessary overlap.",
-  },
-  {
-    id: 32,
-    section: "Logical Reasoning",
-    question:
-      "If a proposal is approved, funding is released. If funding is released, the project begins. The project has not begun. Assuming these conditional statements hold, what follows?",
-    options: [
-      "The proposal was approved.",
-      "The proposal was not approved.",
-      "Funding was released.",
-      "The project began but stopped immediately.",
-    ],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "If the project has not begun, funding was not released; therefore, the proposal was not approved. This is valid by modus tollens applied through the chain.",
-  },
-  {
-    id: 33,
-    section: "Logical Reasoning",
-    question:
-      "A city installs more CCTV cameras, after which reported theft increases. An official concludes that the cameras caused more theft. Which fact most weakens this conclusion?",
-    options: [
-      "The cameras were installed in public areas.",
-      "Residents support crime prevention.",
-      "The city also introduced an online reporting system that made it easier to report theft.",
-      "Some cameras record at night.",
+      "2, 3 and 4 only",
+      "1, 2 and 3 only",
+      "1, 2 and 4 only",
+      "1, 2, 3 and 4",
     ],
     answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Improved reporting could increase recorded theft without increasing the actual incidence of theft.",
-  },
-  {
-    id: 34,
-    section: "Logical Reasoning",
-    question:
-      "A college claims that its new coaching programme improves examination results because students who attended it scored higher than those who did not. Which question is most important to evaluate the claim?",
-    options: [
-      "Were the students who attended already more prepared or motivated before the programme?",
-      "Was the classroom painted recently?",
-      "Did the programme have a memorable name?",
-      "Were the students given notebooks?",
-    ],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Pre-existing differences between participants and non-participants could explain the score difference without a causal effect.",
-  },
-  {
-    id: 35,
-    section: "Logical Reasoning",
-    question:
-      "Five candidates P, Q, R, S and T stand in a row. P is left of Q; R is right of Q; S is left of P; T is right of R. Who must be in the middle?",
-    options: ["P", "Q", "R", "S"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The constraints force the order S, P, Q, R, T. Q is in the middle.",
-  },
-  {
-    id: 36,
-    section: "Logical Reasoning",
-    question:
-      "A report states: 'Every district that reduced traffic deaths expanded public transport. District X expanded public transport; therefore, District X reduced traffic deaths.' What is the logical flaw?",
-    options: [
-      "It confuses a cause with an unrelated number.",
-      "It assumes every district has the same population.",
-      "It draws a conclusion by affirming the consequent; expansion may not be sufficient to guarantee the outcome.",
-      "It contradicts the statement that public transport exists.",
-    ],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The original conditional says reduction implies expansion, not that expansion necessarily implies reduction.",
-  },
-  {
-    id: 37,
-    section: "Logical Reasoning",
-    question:
-      "A company argues that remote work reduces productivity because productivity fell after remote work was introduced. Which additional evidence most strengthens the company's argument?",
-    options: [
-      "Employees say they enjoy working remotely.",
-      "Comparable teams with similar workloads and management remained in the office and did not experience the same decline.",
-      "The office has recently been renovated.",
-      "Remote employees use different wallpaper on video calls.",
-    ],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "A comparable control group without the intervention helps assess whether remote work explains the decline.",
-  },
-  {
-    id: 38,
-    section: "Logical Reasoning",
-    question:
-      "In a code, every letter is replaced by the next letter in the alphabet, with Z followed by A. How is LAW coded?",
-    options: ["MBX", "KBV", "MBW", "LBX"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "L becomes M, A becomes B, and W becomes X. Therefore, LAW becomes MBX.",
-  },
-  {
-    id: 39,
-    section: "Logical Reasoning",
-    question:
-      "A researcher finds that people who read more books tend to have higher incomes. Which conclusion is best supported by this observation alone?",
-    options: [
-      "Reading books always causes higher income.",
-      "Income has no relationship with education.",
-      "All high-income people read more books.",
-      "Reading and income are associated, but the observation alone does not establish causation.",
-    ],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Correlation alone does not rule out confounding variables or establish a causal relationship.",
-  },
-  {
-    id: 40,
-    section: "Logical Reasoning",
-    question:
-      "A committee must choose exactly two projects from A, B, C and D. A cannot be selected with B; C can be selected only if A is selected. Which pair is impossible?",
-    options: ["A and C", "A and D", "B and D", "B and C"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "C requires A, but B cannot be selected with A. Therefore, B and C cannot form a valid pair.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Withdrawals from the Public Account are made without a parliamentary appropriation, as the Government acts largely as a banker there."
   },
 
-  // =====================================================
-  // SECTION 5: QUANTITATIVE TECHNIQUES (41-50)
-  // =====================================================
+  {
+    id: 32,
+    section: "Indian Economy",
+    question: `In an economy, the following data are given: GDP at market prices = ₹100 crore; depreciation (consumption of fixed capital) = ₹10 crore; net indirect taxes = ₹8 crore; net factor income from abroad = ₹2 crore. What is the National Income (NNP at factor cost)?`,
+    options: [
+      "₹80 crore",
+      "₹84 crore",
+      "₹92 crore",
+      "₹100 crore",
+    ],
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "NNP at market prices = 100 − 10 + 2 = ₹92 crore. NNP at factor cost = 92 − 8 (net indirect taxes) = ₹84 crore."
+  },
+
+  {
+    id: 33,
+    section: "Indian Economy",
+    question: `Consider the following statements:
+
+1. The Minimum Support Price is announced by the Government of India on the recommendation of the Commission for Agricultural Costs and Prices (CACP).
+2. The CACP is a statutory body established by an Act of Parliament.
+3. The National Food Security Act, 2013 provides coverage for up to 75% of the rural and 50% of the urban population.
+4. Priority households are entitled to 5 kg of foodgrains per person per month, while Antyodaya Anna Yojana households receive 35 kg per household per month.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1 and 3 only",
+      "1, 3 and 4 only",
+      "2, 3 and 4 only",
+      "1, 2 and 4 only",
+    ],
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. The CACP is an attached office of the Ministry of Agriculture and Farmers Welfare, not a statutory body created by an Act."
+  },
+
+  {
+    id: 34,
+    section: "Indian Economy",
+    question: `Consider the following statements about the external sector:
+
+1. The Indian rupee is fully convertible on the capital account.
+2. Investment by a foreign portfolio investor in an Indian company beyond the 10% threshold of post-issue paid-up equity is treated as FDI.
+3. External Commercial Borrowings are regulated under the Foreign Exchange Management Act, 1999.
+4. The Special Drawing Right is an international reserve asset created by the IMF whose value is based on a basket of currencies.
+
+Which of the statements given above are correct?`,
+    options: [
+      "2 and 3 only",
+      "2, 3 and 4 only",
+      "1, 2 and 3 only",
+      "1 and 4 only",
+    ],
+    answer: 1,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 2, 3 and 4 are correct. The rupee is not fully convertible on the capital account; capital account convertibility is partial and subject to regulation."
+  },
+
+  {
+    id: 35,
+    section: "Indian Economy",
+    question: `Consider the following Assertion (A) and Reason (R):
+
+Assertion (A): Currency depreciation can raise domestic inflation in an import-dependent economy.
+
+Reason (R): Currency depreciation lowers the domestic-currency price of imported goods.
+
+Which one of the following is correct?`,
+    options: AR_OPTIONS,
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "A is true because imported inputs and goods become costlier in domestic currency. R is false: depreciation raises the domestic-currency price of imports."
+  },
+
+  {
+    id: 36,
+    section: "Indian Economy",
+    question: `Consider the following statements about the Human Development Index (HDI):
+
+1. The HDI was introduced by the UNDP in 1990, drawing on the work of Mahbub ul Haq and Amartya Sen.
+2. The income dimension of the HDI is measured by GDP per capita at current market exchange rates.
+3. The HDI is computed using the arithmetic mean of the three dimension indices.
+4. The Inequality-adjusted HDI discounts the HDI value for inequality in the distribution of health, education and income.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1 and 4 only",
+      "1, 2 and 3 only",
+      "2 and 3 only",
+      "1, 3 and 4 only",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 4 are correct. The HDI uses GNI per capita (PPP) for income and, since 2010, aggregates the three dimension indices with a geometric mean."
+  },
+
+  // ==========================================
+  // 37–42: ENVIRONMENT AND ECOLOGY
+  // ==========================================
+  {
+    id: 37,
+    section: "Environment and Ecology",
+    question: `Consider the following statements regarding global biodiversity governance:
+
+1. The Nagoya Protocol concerns access to genetic resources and the fair and equitable sharing of benefits arising from their utilisation.
+2. The Cartagena Protocol primarily regulates access and benefit-sharing for genetic resources.
+3. The Kunming–Montreal Global Biodiversity Framework includes a target to conserve at least 30% of land and sea areas by 2030.
+4. The Aichi Biodiversity Targets were adopted at the CBD COP10 held in Nagoya in 2010.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1, 2 and 4 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
+      "1, 2, 3 and 4",
+    ],
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. The Cartagena Protocol deals with the safe handling, transport and use of living modified organisms (biosafety)."
+  },
+
+  {
+    id: 38,
+    section: "Environment and Ecology",
+    question: `Consider the following statements regarding the Wildlife (Protection) Act, 1972:
+
+1. The 2002 Amendment introduced Conservation Reserves and Community Reserves.
+2. The 2022 Amendment reduced the number of Schedules from six to four.
+3. The 2022 Amendment gave statutory backing for implementing CITES.
+4. Only the Union Government can notify a Wildlife Sanctuary.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1, 2 and 3 only",
+      "1 and 2 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 3 are correct. State Governments can notify Wildlife Sanctuaries and National Parks, so statement 4 is incorrect."
+  },
+
+  {
+    id: 39,
+    section: "Environment and Ecology",
+    question: `Consider the following statements regarding the Paris Agreement and India's climate commitments:
+
+1. The Agreement aims to hold the global temperature rise well below 2°C and pursue efforts to limit it to 1.5°C above pre-industrial levels.
+2. The emission targets in each country's NDC are legally binding under international law, and failure to meet them attracts penalties.
+3. Article 6 provides for cooperative approaches, including carbon market mechanisms.
+4. India's updated NDC (2022) includes a target of reducing the emissions intensity of GDP by 45% from 2005 levels by 2030.
+
+Which of the statements given above are correct?`,
+    options: [
+      "2 and 4 only",
+      "1, 2 and 3 only",
+      "1, 2, 3 and 4",
+      "1, 3 and 4 only",
+    ],
+    answer: 3,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. Parties have binding procedural obligations (preparing and communicating NDCs), but the Agreement does not make NDC targets legally enforceable with penalties."
+  },
+
+  {
+    id: 40,
+    section: "Environment and Ecology",
+    question: `Consider the following statements about ecological succession:
+
+1. Primary succession begins on a surface that has never supported a community, such as bare rock.
+2. Lichens are typical pioneer species in the succession on bare rock.
+3. The climax community of a region is determined exclusively by climate, irrespective of soil, topography and disturbance.
+4. An ecotone often shows the "edge effect", with greater species density than the adjoining communities.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1, 2 and 4 only",
+      "1 and 2 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Statement 3 reflects the monoclimax view; the polyclimax view recognises that soil, topography and disturbance also shape climax communities."
+  },
+
   {
     id: 41,
-    section: "Quantitative Techniques",
-    question:
-      "A product's price is increased by 20% and then reduced by 20%. If its original price was ₹2,500, what is the final price?",
-    options: ["₹2,500", "₹2,400", "₹2,450", "₹2,000"],
+    section: "Environment and Ecology",
+    question: `Consider the following pairs of species and their IUCN Red List status:
+
+1. Great Indian Bustard — Critically Endangered
+2. Snow Leopard — Endangered
+3. Red Panda — Vulnerable
+4. Gharial — Critically Endangered
+
+How many of the pairs given above are correctly matched?`,
+    options: [
+      "Only one",
+      "Only two",
+      "Only three",
+      "All four",
+    ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "₹2,500 × 1.20 × 0.80 = ₹2,400. Equal percentage increases and decreases do not cancel.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Only pairs 1 and 4 are correct. The Snow Leopard is listed as Vulnerable and the Red Panda as Endangered."
   },
+
   {
     id: 42,
-    section: "Quantitative Techniques",
-    question:
-      "The ratio of students in sections A and B is 5:7. If 12 students move from B to A, the sections become equal in size. What was the original total number of students?",
-    options: ["60", "84", "72", "96"],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Let the sizes be 5x and 7x. Then 5x + 12 = 7x - 12, so x = 12. Total = 12x = 144. The listed options do not include 144.",
+    section: "Environment and Ecology",
+    question: `Consider the following statements about Biosphere Reserves in India:
+
+1. The core zone is legally protected and is kept free from human activity.
+2. The buffer zone allows no research, monitoring or ecotourism.
+3. The transition zone permits human settlements and sustainable economic activities.
+4. Biosphere Reserves in India are declared under the Wildlife (Protection) Act, 1972.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1 and 3 only",
+      "1, 2 and 3 only",
+      "2 and 4 only",
+      "3 and 4 only",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 3 are correct. The buffer zone permits research, monitoring and managed activities, and Biosphere Reserves are designated by the Government under the MAB programme framework rather than declared under the Wildlife (Protection) Act."
   },
+
+  // ==========================================
+  // 43–46: SCIENCE AND TECHNOLOGY
+  // ==========================================
   {
     id: 43,
-    section: "Quantitative Techniques",
-    question:
-      "A train 180 metres long crosses a pole in 9 seconds. At the same speed, how long will it take to cross a 220-metre platform?",
-    options: ["11 seconds", "18 seconds", "20 seconds", "22 seconds"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Speed = 180/9 = 20 m/s. Distance to clear the platform = 180 + 220 = 400 m. Time = 400/20 = 20 seconds. The correct option is 20 seconds.",
+    section: "Science and Technology",
+    question: `Consider the following statements about India's space missions:
+
+1. Chandrayaan-3 landed near the lunar south polar region in August 2023.
+2. Aditya-L1 is positioned at the Sun–Earth L2 Lagrange point.
+3. XPoSat is designed to study X-ray polarisation from cosmic sources.
+4. NISAR is a joint NASA–ISRO Earth-observation mission carrying L-band and S-band radars.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1, 2 and 4 only",
+      "1 and 3 only",
+      "2, 3 and 4 only",
+      "1, 3 and 4 only",
+    ],
+    answer: 3,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 3 and 4 are correct. Aditya-L1 is placed in a halo orbit around the Sun–Earth L1 point, not L2."
   },
+
   {
     id: 44,
-    section: "Quantitative Techniques",
-    question:
-      "A sum of ₹10,000 is invested at 10% compound interest per year for two years. What is the amount at the end of two years?",
-    options: ["₹11,000", "₹12,000", "₹12,100", "₹12,200"],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Amount = ₹10,000 × 1.1² = ₹12,100.",
+    section: "Science and Technology",
+    question: `Consider the following statements about biotechnology:
+
+1. mRNA vaccines deliver genetic instructions that lead host cells to produce an antigen, without altering the host's genome.
+2. Lipid nanoparticles are commonly used to deliver mRNA into cells.
+3. A gene drive is a technology that can bias inheritance, and it is possible only in plants.
+4. Bt cotton is the only genetically modified crop approved for commercial cultivation in India.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1, 2, 3 and 4",
+      "1 and 2 only",
+      "2, 3 and 4 only",
+      "1, 2 and 4 only",
+    ],
+    answer: 3,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Gene drives have been studied mainly in insects such as mosquitoes and are not limited to plants."
   },
+
   {
     id: 45,
-    section: "Quantitative Techniques",
-    question:
-      "A shopkeeper marks an item 40% above cost and gives a 15% discount on the marked price. What is the profit percentage?",
-    options: ["15%", "19%", "21%", "25%"],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Let cost be 100. Marked price = 140; selling price = 140 × 0.85 = 119. Profit = 19%. The correct option is 19%.",
+    section: "Science and Technology",
+    question: `Consider the following statements about quantum technologies:
+
+1. The National Quantum Mission was approved by the Union Cabinet in April 2023.
+2. A qubit can exist in a superposition of states.
+3. Quantum computers can already break all modern encryption, including every quantum key distribution scheme.
+4. Shor's algorithm can, in principle, factorise large integers efficiently on a sufficiently powerful quantum computer.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1, 2 and 4 only",
+      "1 and 2 only",
+      "2, 3 and 4 only",
+      "1, 2, 3 and 4",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Current quantum computers cannot break all encryption, and quantum key distribution is designed to be secure through the laws of physics."
   },
+
   {
     id: 46,
-    section: "Quantitative Techniques",
-    question:
-      "The average of eight numbers is 24. If one number, 18, is replaced by 34, what is the new average?",
-    options: ["24", "25", "26", "28"],
+    section: "Science and Technology",
+    question: `Consider the following diseases:
+
+1. Chikungunya
+2. Dengue
+3. Zika virus disease
+4. Japanese encephalitis
+
+Which of the diseases given above are transmitted primarily by Aedes mosquitoes?`,
+    options: [
+      "1, 2, 3 and 4",
+      "1, 2 and 3 only",
+      "3 and 4 only",
+      "1 and 4 only",
+    ],
     answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "The total increases by 16. The new average is 24 + 16/8 = 26. The correct option is 26.",
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Chikungunya, dengue and Zika are transmitted mainly by Aedes mosquitoes. Japanese encephalitis is transmitted mainly by Culex mosquitoes."
   },
+
+  // ==========================================
+  // 47–50: INTERNATIONAL RELATIONS AND GOVERNANCE
+  // ==========================================
   {
     id: 47,
-    section: "Quantitative Techniques",
-    question:
-      "A and B can complete a job in 12 and 18 days respectively. Working together at constant rates, how many days will they take?",
-    options: ["6 days", "7.2 days", "8 days", "9 days"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Combined rate = 1/12 + 1/18 = 5/36 job per day. Time = 36/5 = 7.2 days.",
+    section: "International Relations",
+    question: `Consider the following statements about the Shanghai Cooperation Organisation (SCO):
+
+1. India and Pakistan became full members in 2017.
+2. Iran became a full member in 2023.
+3. Afghanistan is a full member of the SCO.
+4. Belarus became a full member in 2024.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1 and 2 only",
+      "2, 3 and 4 only",
+      "1, 2 and 4 only",
+      "1, 2, 3 and 4",
+    ],
+    answer: 2,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1, 2 and 4 are correct. Afghanistan has held observer status and is not a full member."
   },
+
   {
     id: 48,
-    section: "Quantitative Techniques",
-    question:
-      "A bag contains 5 red, 4 blue and 3 green balls. One ball is chosen at random. What is the probability that it is not blue?",
-    options: ["1/3", "1/2", "2/3", "3/4"],
-    answer: 2,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "There are 12 balls in total and 8 are not blue. Probability = 8/12 = 2/3.",
+    section: "International Relations",
+    question: `Consider the following statements about India's connectivity initiatives:
+
+1. The India–Middle East–Europe Economic Corridor (IMEC) was announced at the G20 Summit in New Delhi in 2023.
+2. The Kaladan Multi-Modal Transit Transport Project links Kolkata with Sittwe port in Myanmar.
+3. Chabahar port is located on the Gulf of Aden.
+4. The International North–South Transport Corridor does not involve Iran.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1 and 2 only",
+      "1, 2 and 4 only",
+      "3 and 4 only",
+      "1, 3 and 4 only",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 2 are correct. Chabahar lies on the Gulf of Oman in Iran, and the INSTC runs through Iran."
   },
+
   {
     id: 49,
-    section: "Quantitative Techniques",
-    question:
-      "A town's population increases by 10% in the first year and decreases by 10% in the second year. If the initial population is 50,000, what is the final population?",
-    options: ["50,000", "49,500", "49,000", "50,500"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Final population = 50,000 × 1.10 × 0.90 = 49,500.",
+    section: "Governance and Public Policy",
+    question: `Consider the following statements:
+
+1. The Lokpal's jurisdiction over the Prime Minister extends to allegations relating to international relations, external and internal security, public order, atomic energy and space.
+2. The Central Vigilance Commission is a statutory body under the CVC Act, 2003.
+3. The Comptroller and Auditor General can be removed from office in the same manner and on the same grounds as a Judge of the Supreme Court.
+4. The Chairperson of the Lokpal must always be a former Chief Justice of India.
+
+Which of the statements given above are correct?`,
+    options: [
+      "2 and 3 only",
+      "1, 2 and 3 only",
+      "2, 3 and 4 only",
+      "1 and 4 only",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 2 and 3 are correct. Those subjects are excluded from the Lokpal's jurisdiction over the Prime Minister, and the Chairperson may be a former CJI, a former Supreme Court Judge, or an eminent person who meets the Act's criteria."
   },
+
   {
     id: 50,
-    section: "Quantitative Techniques",
-    question:
-      "A student scores 72, 68, 81 and 79 in four tests. What score must the student obtain in the fifth test to achieve an average of 78 across all five tests?",
-    options: ["86", "88", "90", "92"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation:
-      "Required total = 5 × 78 = 390. Existing total = 300. Required fifth score = 390 - 300 = 90. The correct option is 90.",
+    section: "Governance and Public Policy",
+    question: `Consider the following statements about recent legal reforms:
+
+1. The Digital Personal Data Protection Act, 2023 provides for the establishment of a Data Protection Board of India.
+2. The Bharatiya Nyaya Sanhita, 2023 came into force on 1 January 2024.
+3. The Bharatiya Nagarik Suraksha Sanhita, 2023 replaced the Code of Criminal Procedure, 1973.
+4. The Bharatiya Nyaya Sanhita retains the offence of sedition as Section 124A.
+
+Which of the statements given above are correct?`,
+    options: [
+      "1 and 3 only",
+      "1, 2 and 3 only",
+      "3 and 4 only",
+      "1, 3 and 4 only",
+    ],
+    answer: 0,
+    marks: 2,
+    negativeMarks: 0.66,
+    explanation: "Statements 1 and 3 are correct. The new criminal codes came into force on 1 July 2024, and the BNS does not retain Section 124A sedition; Section 152 addresses acts endangering the sovereignty, unity and integrity of India."
   },
 ];
 
