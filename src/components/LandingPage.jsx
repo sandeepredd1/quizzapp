@@ -109,8 +109,8 @@ export default function LandingPage({
           </div>
           <div className="compact-stat group flex flex-col items-center gap-1 px-2 py-3 transition hover:bg-amber-500/[.07] sm:py-4">
             <div className="compact-stat-icon rounded-xl bg-amber-500/10 p-2 text-amber-500"><Trophy size={18} /></div>
-            <span className="text-xl font-black sm:text-2xl">Hard</span>
-            <span className={`text-[9px] font-semibold sm:text-[11px] ${dark ? "text-slate-400" : "text-slate-500"}`}>Difficulty</span>
+            <span className="text-xl font-black sm:text-2xl">BEST</span>
+            <span className={`text-[9px] font-semibold sm:text-[11px] ${dark ? "text-slate-400" : "text-slate-500"}`}>of luck</span>
           </div>
         </div>
 
