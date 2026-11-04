@@ -12,13 +12,11 @@ import {
   Moon,
   Sun,
   Timer,
-  AlertTriangle,
   CircleCheck,
   CircleX,
   CircleDashed,
 } from "lucide-react";
 
-const QUESTION_TIME = 60;
 const TIMER_RADIUS = 45;
 const TIMER_CIRCUMFERENCE = 2 * Math.PI * TIMER_RADIUS;
 
@@ -34,8 +32,8 @@ export default function QuizPage({
   theme = "light",
   onToggleTheme,
 }) {
-  const [timeLeft, setTimeLeft] = useState(QUESTION_TIME);
-  const [showTimeoutNotice, setShowTimeoutNotice] = useState(false);
+  const examDurationSeconds = examConfig.durationMinutes * 60;
+  const [timeLeft, setTimeLeft] = useState(examDurationSeconds);
 
   const onSubmitRef = useRef(onSubmit);
   const submittedRef = useRef(false);
@@ -44,7 +42,9 @@ export default function QuizPage({
   const question = questions[currentQuestion];
   const dark = theme === "dark";
 
-  onSubmitRef.current = onSubmit;
+  useEffect(() => {
+    onSubmitRef.current = onSubmit;
+  }, [onSubmit]);
 
   const heading = dark ? "text-white" : "text-slate-900";
   const muted = dark ? "text-slate-400" : "text-slate-500";
@@ -71,52 +71,32 @@ export default function QuizPage({
 
   const timerPercentage = Math.max(
     0,
-    Math.min(100, (timeLeft / QUESTION_TIME) * 100)
+    Math.min(100, (timeLeft / examDurationSeconds) * 100)
   );
 
   const timerOffset =
     TIMER_CIRCUMFERENCE -
     (timerPercentage / 100) * TIMER_CIRCUMFERENCE;
 
-  const timerWarning = timeLeft <= 10;
-  const timerColor = timerWarning ? "#ef4444" : "#6366f1";
+  const timerWarning = timeLeft <= 5 * 60;
 
-  // Reset the timer for each question.
+  // Keep one countdown running for the entire exam.
   useEffect(() => {
-    setTimeLeft(QUESTION_TIME);
-    setShowTimeoutNotice(false);
-    submittedRef.current = false;
-
     const interval = setInterval(() => {
       setTimeLeft((previous) => Math.max(0, previous - 1));
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [currentQuestion]);
+  }, []);
 
-  // Automatically advance when the timer reaches zero.
+  // Submit the exam when the overall time limit expires.
   useEffect(() => {
     if (timeLeft !== 0 || !question) return;
 
-    setShowTimeoutNotice(true);
-
-    const timeout = setTimeout(() => {
-      if (currentQuestion < totalQuestions - 1) {
-        setCurrentQuestion((previous) => previous + 1);
-      } else if (!submittedRef.current) {
-        submittedRef.current = true;
-        onSubmitRef.current();
-      }
-    }, 700);
-
-    return () => clearTimeout(timeout);
-  }, [
-    timeLeft,
-    currentQuestion,
-    totalQuestions,
-    question,
-    setCurrentQuestion,
-  ]);
+    if (submittedRef.current) return;
+    submittedRef.current = true;
+    onSubmitRef.current();
+  }, [timeLeft, question]);
 
   function chooseAnswer(optionIndex) {
     if (timeLeft === 0) return;
@@ -410,19 +390,10 @@ export default function QuizPage({
                 )}
               </div>
 
-              {showTimeoutNotice && (
-                <p
-                  role="status"
-                  className="mt-5 flex items-center gap-2 rounded-xl bg-amber-500/10 p-3 text-sm font-semibold text-amber-500 animate-fade-in"
-                >
-                  <AlertTriangle size={18} />
-                  Time is up! Moving to the next question...
-                </p>
-              )}
             </section>
           </div>
 
-          {/* RIGHT SIDE: Circular timer and pending questions */}
+          {/* RIGHT SIDE: Overall exam timer and pending questions */}
           <aside className="flex min-w-0 flex-col gap-5 lg:sticky lg:top-5">
             {/* Circular timer */}
             <section
@@ -433,11 +404,11 @@ export default function QuizPage({
               <div className="relative flex items-center justify-between gap-3">
                 <div>
                   <p className={`text-sm font-black ${heading}`}>
-                    Question Timer
+                    Overall Exam Timer
                   </p>
 
                   <p className={`mt-1 text-xs ${muted}`}>
-                    60 seconds per question
+                    {examConfig.durationMinutes} minutes for all questions
                   </p>
                 </div>
 
@@ -457,7 +428,7 @@ export default function QuizPage({
 
               <div
                 className="relative mx-auto mt-5 flex h-48 w-48 items-center justify-center"
-                aria-label={`${timeLeft} seconds remaining`}
+                aria-label={`${timeLeft} seconds remaining for the exam`}
                 aria-live="polite"
               >
                 <svg
@@ -516,7 +487,8 @@ export default function QuizPage({
                       timerWarning ? "text-red-500" : heading
                     }`}
                   >
-                    00:{String(timeLeft).padStart(2, "0")}
+                    {String(Math.floor(timeLeft / 60)).padStart(2, "0")}:
+                    {String(timeLeft % 60).padStart(2, "0")}
                   </span>
 
                   <span className={`mt-1 text-xs font-semibold ${muted}`}>
@@ -538,10 +510,10 @@ export default function QuizPage({
                       : "bg-indigo-50 text-indigo-700"
                 }`}
               >
-                {timeLeft <= 10 && timeLeft > 0
-                  ? "Only a few seconds left!"
+                {timerWarning && timeLeft > 0
+                  ? "Only a few minutes left!"
                   : timeLeft === 0
-                    ? "Moving to the next question..."
+                    ? "Submitting your exam..."
                     : "Manage your time carefully"}
               </div>
             </section>
