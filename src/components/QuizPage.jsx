@@ -34,6 +34,8 @@ export default function QuizPage({
 }) {
   const examDurationSeconds = examConfig.durationMinutes * 60;
   const [timeLeft, setTimeLeft] = useState(examDurationSeconds);
+  const [markedQuestions, setMarkedQuestions] = useState({});
+  const [skippedQuestions, setSkippedQuestions] = useState({});
 
   const onSubmitRef = useRef(onSubmit);
   const submittedRef = useRef(false);
@@ -101,10 +103,62 @@ export default function QuizPage({
   function chooseAnswer(optionIndex) {
     if (timeLeft === 0) return;
 
-    setAnswers((previous) => ({
+    setAnswers((previous) => {
+      const updated = { ...previous };
+
+      if (previous[currentQuestion] === optionIndex) {
+        delete updated[currentQuestion];
+      } else {
+        updated[currentQuestion] = optionIndex;
+      }
+
+      return updated;
+    });
+    setMarkedQuestions((previous) => ({
       ...previous,
-      [currentQuestion]: optionIndex,
+      [currentQuestion]: false,
     }));
+    setSkippedQuestions((previous) => ({
+      ...previous,
+      [currentQuestion]: false,
+    }));
+  }
+
+  function markQuestionAsRead() {
+    setMarkedQuestions((previous) => ({
+      ...previous,
+      [currentQuestion]: true,
+    }));
+    setSkippedQuestions((previous) => ({
+      ...previous,
+      [currentQuestion]: false,
+    }));
+
+    if (currentQuestion < totalQuestions - 1) {
+      goToQuestion(currentQuestion + 1);
+    }
+  }
+
+  function skipQuestion() {
+    if (timeLeft === 0) return;
+
+    setAnswers((previous) => {
+      const updated = { ...previous };
+      delete updated[currentQuestion];
+      return updated;
+    });
+    setMarkedQuestions((previous) => ({
+      ...previous,
+      [currentQuestion]: false,
+    }));
+    setSkippedQuestions((previous) => ({
+      ...previous,
+      [currentQuestion]: true,
+    }));
+
+    if (currentQuestion < totalQuestions - 1) {
+      goToQuestion(currentQuestion + 1);
+    }
   }
 
   function goToQuestion(index) {
@@ -352,19 +406,56 @@ export default function QuizPage({
                   dark ? "border-white/10" : "border-slate-100"
                 }`}
               >
-                <button
-                  type="button"
-                  disabled={currentQuestion === 0}
-                  onClick={() => goToQuestion(currentQuestion - 1)}
-                  className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border px-5 py-3 font-bold transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 ${
-                    dark
-                      ? "border-white/10 bg-slate-800 text-slate-200 hover:bg-slate-700"
-                      : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
-                  }`}
-                >
-                  <ArrowLeft size={18} />
-                  Previous
-                </button>
+                <div className="flex flex-wrap gap-3">
+                  <button
+                    type="button"
+                    disabled={currentQuestion === 0}
+                    onClick={() => goToQuestion(currentQuestion - 1)}
+                    className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border px-5 py-3 font-bold transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 ${
+                      dark
+                        ? "border-white/10 bg-slate-800 text-slate-200 hover:bg-slate-700"
+                        : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                    }`}
+                  >
+                    <ArrowLeft size={18} />
+                    Previous
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={skipQuestion}
+                    disabled={timeLeft === 0}
+                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-red-400/40 bg-red-500/10 px-5 py-3 font-bold text-red-500 transition-all hover:-translate-y-0.5 hover:bg-red-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Skip
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={markQuestionAsRead}
+                    disabled={timeLeft === 0}
+                    aria-pressed={Boolean(markedQuestions[currentQuestion])}
+                    className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border px-5 py-3 font-bold transition-all hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 ${
+                      markedQuestions[currentQuestion]
+                        ? "border-amber-400/50 bg-amber-500/10 text-amber-500"
+                        : dark
+                          ? "border-white/10 bg-slate-800 text-slate-300 hover:border-amber-400/50"
+                          : "border-slate-200 bg-white text-slate-600 hover:border-amber-300"
+                    }`}
+                  >
+                    <Flag
+                      size={16}
+                      fill={
+                        markedQuestions[currentQuestion]
+                          ? "currentColor"
+                          : "none"
+                      }
+                    />
+                    {markedQuestions[currentQuestion]
+                      ? "Mark as read"
+                      : "Mark for review"}
+                  </button>
+                </div>
 
                 {currentQuestion < totalQuestions - 1 ? (
                   <button
@@ -612,25 +703,47 @@ export default function QuizPage({
                 {questions.map((item, index) => {
                   const isCurrent = currentQuestion === index;
                   const isAnswered = answers[index] !== undefined;
+                  const isMarked = Boolean(markedQuestions[index]);
+                  const isSkipped = Boolean(skippedQuestions[index]);
 
                   return (
                     <button
                       key={item.id ?? index}
                       type="button"
                       onClick={() => goToQuestion(index)}
-                      aria-label={`Go to question ${index + 1}`}
+                      aria-label={`Go to question ${index + 1}${
+                        isMarked
+                          ? ", marked for review"
+                          : isSkipped
+                            ? ", skipped"
+                            : isAnswered
+                              ? ", completed"
+                              : ""
+                      }`}
                       aria-current={isCurrent ? "step" : undefined}
-                      className={`flex aspect-square min-w-0 items-center justify-center rounded-xl border text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 ${
-                        isCurrent
-                          ? "border-indigo-600 bg-indigo-600 text-white shadow-lg shadow-indigo-600/20"
-                          : isAnswered
-                            ? "border-emerald-400/40 bg-emerald-500/10 text-emerald-500"
-                            : dark
-                              ? "border-white/10 bg-slate-800 text-slate-300 hover:border-indigo-400/50"
-                              : "border-slate-200 bg-white text-slate-600 hover:border-indigo-300"
+                      className={`relative flex aspect-square min-w-0 items-center justify-center rounded-xl border text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 hover:scale-105 ${
+                        isMarked
+                          ? "border-amber-400/50 bg-amber-500/10 text-amber-500"
+                          : isSkipped
+                            ? "border-red-400/50 bg-red-500/10 text-red-500"
+                            : isAnswered
+                              ? "border-emerald-400/40 bg-emerald-500/10 text-emerald-500"
+                              : isCurrent
+                                ? "border-indigo-600 bg-indigo-600 text-white shadow-lg shadow-indigo-600/20"
+                                : dark
+                                  ? "border-white/10 bg-slate-800 text-slate-300 hover:border-indigo-400/50"
+                                  : "border-slate-200 bg-white text-slate-600 hover:border-indigo-300"
                       }`}
                     >
                       {index + 1}
+                      {isMarked && (
+                        <Flag
+                          size={11}
+                          fill="currentColor"
+                          aria-hidden="true"
+                          className="absolute right-1 top-1 text-amber-500"
+                        />
+                      )}
                     </button>
                   );
                 })}
@@ -650,18 +763,21 @@ export default function QuizPage({
 
                 <div className="flex items-center gap-2">
                   <span className="h-3 w-3 rounded bg-emerald-500" />
-                  Answered
+                  Completed
                 </div>
 
                 <div className="flex items-center gap-2">
-                  <span
-                    className={`h-3 w-3 rounded border ${
-                      dark
-                        ? "border-white/20 bg-slate-800"
-                        : "border-slate-300 bg-white"
-                    }`}
+                  <span className="h-3 w-3 rounded bg-red-500" />
+                  Skipped
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <Flag
+                    size={13}
+                    fill="currentColor"
+                    className="text-amber-500"
                   />
-                  Pending
+                  Marked for review
                 </div>
               </div>
             </section>
