@@ -1,7 +1,9 @@
+
 export const examConfig = {
   appName: "UPSC EXAM",
-  examName: "UPSC CSE Prelims – Advanced Geography Mock Test",
-  description: "50 extremely challenging, analytical Geography questions in UPSC Prelims style.",
+  examName: "UPSC CSE Prelims – Indian Polity Extreme Mock Test",
+  description:
+    "50 extremely difficult Indian Polity questions covering the complete selected UPSC Prelims syllabus.",
   passingPercentage: 35,
   marksPerCorrect: 1,
   negativeMarks: 0.25,
@@ -10,510 +12,916 @@ export const examConfig = {
 };
 
 export const questions = [
+  // 1. HISTORICAL BACKGROUND
   {
     id: 1,
-    section: "Physical Geography",
-    question: "Consider the following statements about the geostrophic wind: 1. It results from a balance between the pressure-gradient force and Coriolis force. 2. It is parallel to isobars on a frictionless horizontal surface. 3. It can exist at the Equator under the same approximation. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Geostrophic balance requires a non-zero Coriolis parameter; the approximation breaks down at the Equator."
-  },
-  {
-    id: 2,
-    section: "Physical Geography",
-    question: "A parcel of unsaturated air rises dry adiabatically until saturation and then continues to rise. Which statement best describes its subsequent cooling?",
-    options: ["It cools at the same rate because latent heat is absent", "It cools at a lower rate because condensation releases latent heat", "It warms because pressure decreases", "Its temperature remains constant"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Latent heat released during condensation offsets part of the adiabatic cooling, giving a lower saturated adiabatic lapse rate."
-  },
-  {
-    id: 3,
-    section: "Physical Geography",
-    question: "Consider the following statements about the thermal structure of the atmosphere: 1. The tropopause is generally higher over the Equator than over the poles. 2. The stratosphere warms with height largely due to ozone absorption of ultraviolet radiation. 3. The mesopause is typically the warmest atmospheric boundary. Which are correct?",
-    options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The mesopause is generally the coldest atmospheric boundary; the thermosphere reaches much higher temperatures."
-  },
-  {
-    id: 4,
-    section: "Physical Geography",
-    question: "Which combination most strongly favours the development of a strong temperature inversion in a valley?",
-    options: ["Cloudy sky, strong winds and a steep valley slope", "Clear sky, long night, weak winds and cold-air drainage", "High daytime insolation and turbulent mixing", "Persistent convective rainfall"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Radiational cooling and downslope drainage allow dense cold air to pool on valley floors under calm, clear conditions."
-  },
-  {
-    id: 5,
-    section: "Physical Geography",
-    question: "With reference to planetary waves (Rossby waves), consider: 1. They arise partly due to the variation of the Coriolis parameter with latitude. 2. Their phase propagation is generally westward relative to the mean flow. 3. They influence the development and persistence of large-scale weather patterns. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Rossby waves are large-scale planetary waves linked to the beta effect and are central to mid-latitude circulation and weather regimes."
-  },
-  {
-    id: 6,
-    section: "Climatology",
-    question: "Consider the following statements regarding the Indian monsoon trough: 1. Its position influences the spatial distribution of monsoon rainfall. 2. A shift towards the Himalayan foothills is associated with break-monsoon conditions over much of central India. 3. It is a permanent feature fixed at the same latitude throughout the year. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The monsoon trough shifts seasonally; its northward displacement is associated with break conditions in many central Indian areas."
-  },
-  {
-    id: 7,
-    section: "Climatology",
-    question: "Which of the following can contribute to the formation of a tropical cyclone? 1. Sufficient Coriolis force away from the Equator. 2. High sea-surface temperature and ocean heat content. 3. Low vertical wind shear. 4. A pre-existing low-level disturbance. Select the correct answer.",
-    options: ["1, 2 and 3 only", "1, 2 and 4 only", "2, 3 and 4 only", "1, 2, 3 and 4"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All are favourable ingredients; strong vertical wind shear generally disrupts cyclone organisation."
-  },
-  {
-    id: 8,
-    section: "Climatology",
-    question: "With reference to Madden–Julian Oscillation (MJO): 1. It is an eastward-propagating pulse of enhanced and suppressed tropical convection. 2. It can modulate the active and break phases of the Indian summer monsoon. 3. It is confined to the North Atlantic basin. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "MJO is an intraseasonal tropical phenomenon, often propagating eastward from the Indian Ocean across the Maritime Continent into the Pacific."
-  },
-  {
-    id: 9,
-    section: "Climatology",
-    question: "A positive Indian Ocean Dipole (IOD) is generally characterised by:",
-    options: ["Warmer western Indian Ocean and cooler eastern equatorial Indian Ocean", "Warmer eastern Indian Ocean and cooler western Indian Ocean", "Uniform warming of the entire Indian Ocean", "Cooling of both western and eastern equatorial Indian Ocean"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "A positive IOD features a positive west-minus-east sea-surface-temperature gradient and can sometimes support Indian monsoon rainfall."
-  },
-  {
-    id: 10,
-    section: "Climatology",
-    question: "Consider these statements about the subtropical jet stream: 1. It is associated with strong horizontal temperature gradients. 2. Its seasonal shift is related to the migration of major pressure and thermal systems. 3. The wintertime subtropical westerly jet influences weather over northern India. Which are correct?",
-    options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All are correct. The subtropical westerly jet is important for winter circulation and western disturbances affecting northern India."
-  },
-  {
-    id: 11,
-    section: "Geomorphology",
-    question: "A river terrace sequence occurs at progressively higher levels above the present floodplain. Which interpretation is most defensible?",
-    options: ["It necessarily proves continuous regional uplift", "It may record alternating phases of incision and floodplain aggradation driven by tectonic, climatic or base-level changes", "It can form only through glacial deposition", "It indicates that the river has ceased lateral erosion permanently"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Terraces are abandoned valley-floor surfaces; their origin may involve interacting tectonic, climatic and base-level controls."
-  },
-  {
-    id: 12,
-    section: "Geomorphology",
-    question: "Consider the following statements about drainage patterns: 1. Trellis drainage commonly develops where resistant and weak strata alternate. 2. Radial drainage develops around domes or volcanic cones. 3. Annular drainage is associated with concentric outcrops around structural domes or basins. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All three drainage patterns are associated with characteristic geological structures and relief."
-  },
-  {
-    id: 13,
-    section: "Geomorphology",
-    question: "Which combination is most diagnostic of a mature karst landscape?",
-    options: ["Dendritic surface streams, levees and oxbow lakes", "Dolines, disappearing streams, caves and underground drainage", "Drumlins, eskers and terminal moraines", "Yardangs, deflation hollows and barchans"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Solutional limestone landscapes commonly contain dolines, caves, sinking streams and subterranean drainage networks."
-  },
-  {
-    id: 14,
-    section: "Geomorphology",
-    question: "With reference to mass movement, consider: 1. Solifluction involves slow downslope movement of water-saturated soil, often in periglacial environments. 2. Rockfall is typically a rapid movement from steep slopes. 3. Slump commonly involves rotational movement along a curved failure surface. Which are correct?",
-    options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All three descriptions are correct and distinguish different mass-wasting processes."
-  },
-  {
-    id: 15,
-    section: "Geomorphology",
-    question: "The concept of dynamic equilibrium in fluvial geomorphology implies that:",
-    options: ["A river channel never changes its form", "Channel form reflects adjustment among discharge, sediment load, sediment calibre, slope and boundary conditions", "Only tectonic uplift determines channel geometry", "A river always reaches a final, permanently stable profile"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Dynamic equilibrium describes ongoing adjustment rather than an unchanging channel or a single final state."
-  },
-  {
-    id: 16,
-    section: "Oceanography",
-    question: "Consider the following statements about the Antarctic Circumpolar Current (ACC): 1. It flows from west to east around Antarctica. 2. It connects the major ocean basins. 3. Its flow is uninterrupted by continental landmasses at comparable southern latitudes. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The ACC is the only major current that circles the globe without being blocked by a continent."
-  },
-  {
-    id: 17,
-    section: "Oceanography",
-    question: "Which of the following conditions can strengthen deep-water formation in high-latitude oceans? 1. Surface cooling. 2. Brine rejection during sea-ice formation. 3. Freshwater input that lowers surface salinity. Select the correct answer.",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Cooling and brine rejection increase seawater density; freshwater input generally lowers density and can inhibit sinking."
-  },
-  {
-    id: 18,
-    section: "Oceanography",
-    question: "With reference to oceanic oxygen minimum zones (OMZs): 1. They may occur where biological oxygen consumption is high. 2. Weak ventilation can favour their persistence. 3. They are necessarily located at the ocean surface. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "OMZs commonly occur at intermediate depths where respiration consumes oxygen and ventilation is limited."
-  },
-  {
-    id: 19,
-    section: "Oceanography",
-    question: "Which of the following conditions can strengthen coastal upwelling?",
-    options: ["Alongshore winds driving surface water offshore through Ekman transport", "Warm surface water sinking along the coast", "Freshwater discharge stopping all vertical movement", "A complete absence of wind stress"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Offshore Ekman transport allows colder, nutrient-rich subsurface water to rise."
-  },
-  {
-    id: 20,
-    section: "Oceanography",
-    question: "Consider the following statements about ocean salinity: 1. High evaporation relative to precipitation tends to increase surface salinity. 2. Large river discharge generally lowers coastal surface salinity. 3. Sea-ice formation can increase salinity of nearby seawater through brine rejection. Which are correct?",
-    options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All three processes affect salinity: evaporation concentrates salts, freshwater dilutes them, and brine rejection raises surrounding seawater salinity."
-  },
-  {
-    id: 21,
-    section: "Indian Geography",
-    question: "Consider the following statements about the western disturbances: 1. They are eastward-moving extra-tropical weather systems embedded in the westerlies. 2. They bring winter precipitation to northwestern India. 3. Their moisture can originate partly from the Mediterranean and adjoining regions. Which are correct?",
-    options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Western disturbances are extra-tropical systems moving with the westerlies and are important for winter rain and Himalayan snowfall."
-  },
-  {
-    id: 22,
-    section: "Indian Geography",
-    question: "Which of the following pairs are correctly matched? 1. Duns—longitudinal valleys between Lesser Himalaya and Shiwalik. 2. Karewas—lacustrine deposits of Kashmir. 3. Doabs—land between two rivers. 4. Pats—lateritic plateaus of the western coastal region. Select the correct answer.",
-    options: ["1, 2 and 3 only", "1 and 4 only", "2 and 3 only", "1, 2, 3 and 4"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Duns, Karewas and doabs are correctly matched. Pats are flat-topped, laterite-capped uplands associated with the Chota Nagpur region, including the Netarhat area, rather than a general feature of the western coastal region."
-  },
-  {
-    id: 23,
-    section: "Indian Geography",
-    question: "The unusually high rainfall at Mawsynram and Cherrapunji is best explained by the combined effect of:",
-    options: ["Only their proximity to the Equator", "Moisture-laden Bay of Bengal branch, funnel-shaped topography and forced ascent against the Khasi Hills", "Western disturbances and polar easterlies", "The rain-shadow effect of the Aravallis"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Bay of Bengal branch is channelled towards the Khasi Hills, where strong orographic uplift produces exceptional rainfall."
-  },
-  {
-    id: 24,
-    section: "Indian Geography",
-    question: "Consider the following statements about the Deccan Trap: 1. It is largely composed of basaltic lava flows. 2. Its step-like topography reflects successive lava-flow layers and differential erosion. 3. It formed primarily through explosive rhyolitic volcanism. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Deccan Traps are predominantly flood basalts from fissure eruptions, not primarily explosive rhyolitic deposits."
-  },
-  {
-    id: 25,
-    section: "Indian Geography",
-    question: "Which statement best distinguishes the Narmada and Tapi drainage systems from most major east-flowing Peninsular rivers?",
-    options: ["They flow across the oldest alluvial plains", "They occupy west-trending structural troughs and generally enter the Arabian Sea through estuaries", "They originate in the Himalaya and are antecedent rivers", "They form the largest deltas of the east coast"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Narmada and Tapi occupy structural troughs and flow westward to the Arabian Sea."
-  },
-  {
-    id: 26,
-    section: "Indian Geography",
-    question: "Consider the following statements about Indian soils: 1. Laterite formation is favoured by intense leaching under alternating wet and dry tropical conditions. 2. Alluvial soils may vary considerably in texture and age. 3. Black soils generally have high water-retention capacity due to clay content. Which are correct?",
-    options: ["1 and 2 only", "2 and 3 only", "1 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All are correct. Lateritisation involves leaching, alluvium is heterogeneous, and clay-rich black soils retain substantial moisture."
-  },
-  {
-    id: 27,
-    section: "Indian Geography",
-    question: "Which of the following are correctly associated with the Himalayan drainage evolution? 1. Antecedent drainage can preserve an older river course during uplift. 2. River capture may occur through headward erosion. 3. Superimposed drainage develops when a river established on overlying strata cuts down into underlying structures. Select the correct answer.",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All three are recognised drainage concepts describing different relationships between river courses and geological structure."
-  },
-  {
-    id: 28,
-    section: "Indian Geography",
-    question: "With reference to the Indian monsoon, consider: 1. The Somali jet is a low-level cross-equatorial flow that strengthens during the summer monsoon. 2. The Findlater Jet is a strong southwesterly monsoon wind jet over the western Arabian Sea. 3. The jet is unrelated to the pressure gradient between the Mascarene High and the continental low. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Somali/Findlater jet is linked to the pressure gradient between the Mascarene High and the continental thermal low."
-  },
-  {
-    id: 29,
-    section: "Indian Geography",
-    question: "Which one of the following best explains why the Coromandel Coast receives a substantial share of its annual rainfall during the retreating monsoon?",
-    options: ["The southwest monsoon winds reverse and become moisture-free", "Northeast monsoon flow can pick up moisture over the Bay of Bengal, while cyclonic systems contribute rainfall", "The Western Ghats force all Arabian Sea moisture eastward", "The ITCZ remains permanently south of Sri Lanka"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The northeast monsoon and Bay of Bengal depressions/cyclones bring significant rainfall to Tamil Nadu and the Coromandel Coast."
-  },
-  {
-    id: 30,
-    section: "Indian Geography",
-    question: "Consider the following pairs: 1. Loktak—phumdis. 2. Chilika—brackish coastal lagoon. 3. Sambhar—inland saline lake. 4. Vembanad—backwater system. How many are correctly matched?",
-    options: ["Only one", "Only two", "Only three", "All four"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All four are correctly matched with their defining features."
-  },
-  {
-    id: 31,
-    section: "World Geography",
-    question: "Which of the following are characteristic of a Mediterranean-type climate? 1. Subtropical anticyclones dominate in summer. 2. Westerlies bring much of the winter rainfall. 3. Sclerophyll vegetation is a common adaptation. 4. Rainfall is uniformly distributed throughout the year. Select the correct answer.",
-    options: ["1, 2 and 3 only", "1 and 4 only", "2 and 3 only", "1, 2, 3 and 4"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Mediterranean climates have dry summers and wetter winters; sclerophyll vegetation is adapted to summer drought."
-  },
-  {
-    id: 32,
-    section: "World Geography",
-    question: "Consider the following statements about the Andes: 1. The Peru–Chile Trench is associated with subduction of the Nazca Plate beneath South America. 2. The Altiplano is a high plateau associated with Andean mountain building. 3. The Andes are primarily a product of continent-continent collision similar to the Himalaya. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Andes are mainly associated with oceanic-continental subduction, unlike the continent-continent collision responsible for the Himalaya."
-  },
-  {
-    id: 33,
-    section: "World Geography",
-    question: "Which set of processes best explains the formation of the East African Rift System?",
-    options: ["Convergent subduction and crustal shortening", "Continental extension, normal faulting and associated volcanism", "Transform motion alone with no vertical displacement", "Oceanic crustal accretion beneath a mature ocean basin"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The East African Rift is an active continental rift involving extension, normal faults, subsidence and volcanism."
-  },
-  {
-    id: 34,
-    section: "World Geography",
-    question: "With reference to the Sahel, consider: 1. It is a semi-arid transition zone south of the Sahara. 2. Its rainfall is strongly influenced by the seasonal movement of the ITCZ. 3. It receives most of its annual rainfall during the boreal winter. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Sahel lies south of the Sahara and its short wet season is linked to the northward migration of the ITCZ during boreal summer."
-  },
-  {
-    id: 35,
-    section: "World Geography",
-    question: "Which of the following statements about the Arctic and Antarctic is correct?",
-    options: ["Both have the same land-ocean configuration", "The Arctic is predominantly an ocean surrounded by land, whereas Antarctica is a continent surrounded by ocean", "Antarctica is an ocean surrounded by continents", "The Arctic has a higher mean elevation than Antarctica"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The contrasting land-ocean configuration strongly affects their climate, sea ice and circulation."
-  },
-  {
-    id: 36,
-    section: "World Geography",
-    question: "Consider the following pairs: 1. Okavango—endorheic inland delta. 2. Danakil Depression—East African Rift region. 3. Lake Baikal—continental rift lake. 4. Dead Sea—below sea level and endorheic. How many are correctly matched?",
-    options: ["Only one", "Only two", "Only three", "All four"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All four are correctly matched."
-  },
-  {
-    id: 37,
-    section: "World Geography",
-    question: "Which of the following best explains the occurrence of fog along the coast of Namibia?",
-    options: ["Warm Agulhas Current and intense convection", "Cold Benguela Current cooling moist air, often producing advection fog under stable conditions", "Monsoon reversal from the Indian Ocean", "Strong equatorial uplift throughout the year"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The cold Benguela Current cools moist air near the surface and favours persistent coastal advection fog."
-  },
-  {
-    id: 38,
-    section: "World Geography",
-    question: "With reference to the Pacific Ring of Fire: 1. It broadly follows zones of active plate boundaries around the Pacific. 2. It includes many subduction-related volcanic arcs. 3. It is characterised by uniformly divergent plate boundaries. Which are correct?",
-    options: ["1 and 2 only", "1 and 3 only", "2 and 3 only", "1, 2 and 3"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Ring of Fire is dominated by convergent margins and subduction-related volcanism, with some transform boundaries."
-  },
-  {
-    id: 39,
-    section: "World Geography",
-    question: "Which combination most directly explains the existence of the Great Rift Valley lakes with varied salinity and depth?",
-    options: ["Uniform rainfall and identical basin outlets", "Tectonic subsidence, volcanic barriers, variable evaporation and differing drainage connections", "Only glacial erosion", "River deposition across a stable coastal plain"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Rift tectonics create basins; climate, evaporation, volcanic barriers and outlet conditions determine individual lake characteristics."
-  },
-  {
-    id: 40,
-    section: "Mapping",
-    question: "A ship travelling from the Red Sea to the Gulf of Aden must pass through which strait, and which landmass lies to its northeast?",
-    options: ["Strait of Hormuz; Oman", "Bab-el-Mandeb; Arabian Peninsula", "Dardanelles; Anatolia", "Malacca Strait; Sumatra"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Bab-el-Mandeb connects the Red Sea with the Gulf of Aden; the Arabian Peninsula lies to its northeast and the Horn of Africa to its southwest."
-  },
-  {
-    id: 41,
-    section: "Mapping",
-    question: "Which sequence correctly follows a west-to-east passage through the Mediterranean outlet into the Black Sea?",
-    options: ["Dardanelles → Sea of Marmara → Bosporus", "Bosporus → Dardanelles → Sea of Marmara", "Gibraltar → Bosporus → Dardanelles", "Suez Canal → Sea of Marmara → Bosporus"],
-    answer: 0,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Dardanelles connects the Aegean with the Sea of Marmara; the Bosporus connects Marmara with the Black Sea."
-  },
-  {
-    id: 42,
-    section: "Mapping",
-    question: "Which of the following rivers drain into the Gulf of Mexico? 1. Mississippi 2. Rio Grande 3. Alabama 4. Orinoco",
-    options: ["1 and 2 only", "1, 2 and 3 only", "2, 3 and 4 only", "1, 2, 3 and 4"],
-    answer: 1,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "Mississippi, Rio Grande and Alabama drain into the Gulf of Mexico. Orinoco drains into the Atlantic."
-  },
-  {
-    id: 43,
-    section: "Mapping",
-    question: "Which is the correct north-to-south sequence of the following African features: Mediterranean Sea, Gulf of Guinea and Cape of Good Hope?",
+    section: "Historical Background",
+    question:
+      "Which provision of the Regulating Act of 1773 was primarily intended to establish centralised control over the East India Company's administration in India?",
     options: [
-      "Gulf of Guinea → Mediterranean Sea → Cape of Good Hope",
-      "Mediterranean Sea → Gulf of Guinea → Cape of Good Hope",
-      "Cape of Good Hope → Gulf of Guinea → Mediterranean Sea",
-      "Mediterranean Sea → Cape of Good Hope → Gulf of Guinea"
+      "Creation of the office of Secretary of State for India",
+      "Appointment of the Governor-General of Bengal with an Executive Council",
+      "Introduction of separate electorates",
+      "Establishment of provincial dyarchy",
     ],
     answer: 1,
     marks: 1,
     negativeMarks: 0.25,
-    explanation: "The Mediterranean Sea lies in northern Africa, the Gulf of Guinea on the west-central coast, and the Cape of Good Hope at the southern tip."
+    explanation:
+      "The Regulating Act of 1773 created the office of Governor-General of Bengal and an Executive Council of four members. It was an early attempt by the British Parliament to regulate the Company's administration.",
   },
+
   {
-    id: 44,
-    section: "Mapping",
-    question: "Which of the following countries are crossed by the Tropic of Capricorn? 1. Chile 2. Brazil 3. Namibia 4. Madagascar 5. Australia",
-    options: ["1, 2 and 5 only", "1, 2, 3 and 5 only", "2, 3, 4 and 5 only", "1, 2, 3, 4 and 5"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "The Tropic of Capricorn crosses Chile, Argentina, Paraguay, Brazil, Namibia, Botswana, South Africa, Mozambique, Madagascar and Australia."
-  },
-  {
-    id: 45,
-    section: "Mapping",
-    question: "Which of the following pairs are correctly matched? 1. Gulf of Aqaba—Red Sea. 2. Gulf of Bothnia—Baltic Sea. 3. Sea of Okhotsk—northwestern Pacific. 4. Gulf of California—Pacific Ocean.",
-    options: ["1 and 2 only", "1, 2 and 3 only", "2, 3 and 4 only", "1, 2, 3 and 4"],
-    answer: 3,
-    marks: 1,
-    negativeMarks: 0.25,
-    explanation: "All four water bodies are correctly located."
-  },
-  {
-    id: 46,
-    section: "Applied Geography",
-    question: "A coastal station records persistent low cloud, fog, little rainfall and nutrient-rich offshore waters. Which oceanographic-atmospheric combination is most likely?",
-    options: ["Warm western-boundary current with strong convection", "Cold eastern-boundary current, subsidence inversion and coastal upwelling", "Equatorial countercurrent and deep convection", "Warm poleward current and frequent tropical cyclones"],
+    id: 2,
+    section: "Historical Background",
+    question:
+      "Which of the following correctly explains the constitutional significance of the Charter Act of 1833?",
+    options: [
+      "It introduced provincial autonomy.",
+      "It ended the commercial activities of the East India Company and centralised legislative powers.",
+      "It introduced separate electorates for Muslims.",
+      "It transferred Indian administration directly to the British Crown.",
+    ],
     answer: 1,
     marks: 1,
     negativeMarks: 0.25,
-    explanation: "Cold eastern-boundary currents, stable marine layers and upwelling commonly produce foggy, dry coastal deserts with productive waters."
+    explanation:
+      "The Charter Act of 1833 ended the Company's commercial functions and made the Governor-General of Bengal the Governor-General of India. It centralised legislative authority.",
   },
+
   {
-    id: 47,
-    section: "Applied Geography",
-    question: "A river basin experiences increased sediment yield after deforestation, while peak discharge becomes sharper and lag time decreases. Which mechanism best explains the combined response?",
-    options: ["Increased infiltration and greater soil cohesion", "Reduced interception and infiltration, enhanced overland flow and soil erosion", "Reduced surface runoff due to increased evapotranspiration", "Higher baseflow caused by deeper groundwater recharge"],
+    id: 3,
+    section: "Historical Background",
+    question:
+      "Under which Act was the office of Secretary of State for India created?",
+    options: [
+      "Charter Act of 1853",
+      "Government of India Act, 1858",
+      "Indian Councils Act, 1861",
+      "Government of India Act, 1919",
+    ],
     answer: 1,
     marks: 1,
     negativeMarks: 0.25,
-    explanation: "Vegetation removal reduces interception and often infiltration, increasing rapid runoff and erosion."
+    explanation:
+      "The Government of India Act, 1858 transferred administration from the East India Company to the British Crown and created the office of Secretary of State for India.",
   },
+
   {
-    id: 48,
-    section: "Applied Geography",
-    question: "Assertion (A): A rise in the snowline altitude over several decades may indicate regional warming. Reason (R): Higher temperatures can increase melt and shift the balance between accumulation and ablation. Choose the correct answer.",
-    options: ["Both A and R are true, and R is the correct explanation of A", "Both A and R are true, but R is not the correct explanation of A", "A is true, but R is false", "A is false, but R is true"],
+    id: 4,
+    section: "Historical Background",
+    question:
+      "The introduction of separate electorates for Muslims in British India is associated with which constitutional reform?",
+    options: [
+      "Indian Councils Act, 1892",
+      "Indian Councils Act, 1909",
+      "Government of India Act, 1919",
+      "Government of India Act, 1935",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Indian Councils Act, 1909, popularly known as the Morley-Minto Reforms, introduced separate electorates for Muslims.",
+  },
+
+  {
+    id: 5,
+    section: "Historical Background",
+    question:
+      "Which of the following was NOT a feature of the Government of India Act, 1919?",
+    options: [
+      "Introduction of dyarchy in provinces",
+      "Bicameral legislature at the Centre",
+      "Separation of provincial subjects into reserved and transferred categories",
+      "Introduction of provincial autonomy",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Provincial autonomy was introduced by the Government of India Act, 1935. The 1919 Act introduced dyarchy in provinces and bicameralism at the Centre.",
+  },
+
+  {
+    id: 6,
+    section: "Historical Background",
+    question:
+      "Which feature of the Government of India Act, 1935 was adopted in the Indian Constitution?",
+    options: [
+      "Complete parliamentary sovereignty",
+      "Federal scheme and distribution of legislative powers",
+      "Separate electorates for all communities",
+      "Provincial dyarchy in its original form",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Several constitutional features, including the federal scheme, division of legislative powers, office of Governor and emergency provisions, were influenced by the Government of India Act, 1935.",
+  },
+
+  // 2. MAKING OF THE CONSTITUTION
+  {
+    id: 7,
+    section: "Making of the Indian Constitution",
+    question:
+      "The Constituent Assembly of India was constituted under which plan?",
+    options: [
+      "Wavell Plan",
+      "Cabinet Mission Plan",
+      "Mountbatten Plan",
+      "Cripps Mission",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Constituent Assembly was constituted under the Cabinet Mission Plan of 1946. Its members were indirectly elected by provincial legislative assemblies.",
+  },
+
+  {
+    id: 8,
+    section: "Making of the Indian Constitution",
+    question:
+      "Who among the following served as the Constitutional Adviser to the Constituent Assembly?",
+    options: [
+      "Dr. B. R. Ambedkar",
+      "K. M. Munshi",
+      "B. N. Rau",
+      "Alladi Krishnaswami Ayyar",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "B. N. Rau served as the Constitutional Adviser and prepared an initial draft that assisted the Drafting Committee.",
+  },
+
+  {
+    id: 9,
+    section: "Making of the Indian Constitution",
+    question:
+      "Which committee of the Constituent Assembly was chaired by Dr. B. R. Ambedkar?",
+    options: [
+      "Union Powers Committee",
+      "Provincial Constitution Committee",
+      "Drafting Committee",
+      "Advisory Committee on Fundamental Rights",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Drafting Committee was established on 29 August 1947 and was chaired by Dr. B. R. Ambedkar.",
+  },
+
+  {
+    id: 10,
+    section: "Making of the Indian Constitution",
+    question:
+      "Arrange the following events in chronological order:\n\n1. Adoption of the Constitution\n2. First meeting of the Constituent Assembly\n3. Appointment of the Drafting Committee\n4. Enforcement of the Constitution",
+    options: [
+      "2 – 3 – 1 – 4",
+      "3 – 2 – 1 – 4",
+      "2 – 1 – 3 – 4",
+      "3 – 1 – 2 – 4",
+    ],
     answer: 0,
     marks: 1,
     negativeMarks: 0.25,
-    explanation: "A rising snowline can reflect increased ablation relative to accumulation, although precipitation and topographic factors also matter."
+    explanation:
+      "The Constituent Assembly first met on 9 December 1946. The Drafting Committee was appointed on 29 August 1947. The Constitution was adopted on 26 November 1949 and came into force on 26 January 1950.",
   },
+
+  // 3. SALIENT FEATURES
+  {
+    id: 11,
+    section: "Salient Features",
+    question:
+      "Why is India described as a 'Union of States' rather than a federation of States under Article 1?",
+    options: [
+      "States possess an independent right to secede.",
+      "The Indian federation is the result of an agreement among sovereign States.",
+      "The Union is indestructible, while the territorial existence of States can be altered by Parliament.",
+      "States have complete sovereignty over their legislative subjects.",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "India is an indestructible Union of destructible States. Parliament can alter the areas, boundaries and names of States under Article 3.",
+  },
+
+  {
+    id: 12,
+    section: "Salient Features",
+    question:
+      "Which of the following best describes the nature of the Indian parliamentary executive?",
+    options: [
+      "The President exercises all executive powers independently.",
+      "The Council of Ministers is collectively responsible to the Lok Sabha.",
+      "The Prime Minister is directly elected by the people.",
+      "The Council of Ministers is responsible to both Houses equally.",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 75(3) provides that the Council of Ministers is collectively responsible to the House of the People.",
+  },
+
+  {
+    id: 13,
+    section: "Salient Features",
+    question:
+      "A person who is not a member of either House of Parliament is appointed as a Union Minister. What constitutional requirement must be fulfilled?",
+    options: [
+      "The person must be elected to the Lok Sabha within three months.",
+      "The person must become a member of either House within six months.",
+      "The person must receive approval from the Supreme Court.",
+      "The person must be nominated by the President to the Rajya Sabha.",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 75(5) provides that a minister who is not a member of either House for six consecutive months ceases to be a minister.",
+  },
+
+  // 4. PREAMBLE
+  {
+    id: 14,
+    section: "Preamble",
+    question:
+      "In which landmark judgment did the Supreme Court hold that the Preamble is a part of the Constitution?",
+    options: [
+      "Berubari Union Case",
+      "Kesavananda Bharati Case",
+      "Golaknath Case",
+      "Minerva Mills Case",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "In Kesavananda Bharati v. State of Kerala (1973), the Supreme Court held that the Preamble is a part of the Constitution.",
+  },
+
+  {
+    id: 15,
+    section: "Preamble",
+    question:
+      "Which of the following words was NOT added to the Preamble by the 42nd Constitutional Amendment?",
+    options: [
+      "Socialist",
+      "Secular",
+      "Integrity",
+      "Democratic",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The 42nd Amendment added Socialist and Secular and changed Unity of the Nation to Unity and Integrity of the Nation. Democratic was already present.",
+  },
+
+  {
+    id: 16,
+    section: "Preamble",
+    question:
+      "Can the Preamble be used by the Supreme Court to interpret an ambiguous constitutional provision?",
+    options: [
+      "No, because it has no constitutional significance.",
+      "Yes, as an interpretative aid, but it cannot override clear constitutional provisions.",
+      "Yes, and it can override any provision of Part III.",
+      "Only after approval by Parliament.",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Preamble is an important interpretative aid. However, it is neither independently enforceable nor capable of overriding an express constitutional provision.",
+  },
+
+  // 5. UNION AND TERRITORY
+  {
+    id: 17,
+    section: "Union and its Territory",
+    question:
+      "A State Legislature rejects a Bill referred to it under Article 3 for expressing its views. What is the constitutional position?",
+    options: [
+      "Parliament cannot proceed with the Bill.",
+      "The Bill automatically becomes invalid.",
+      "Parliament may still proceed because the State's views are not binding.",
+      "The Supreme Court must approve the Bill before introduction.",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Under Article 3, the President refers the Bill to the concerned State Legislature for its views. Those views are not binding on Parliament.",
+  },
+
+  {
+    id: 18,
+    section: "Union and its Territory",
+    question:
+      "Which constitutional provision permits Parliament to make consequential amendments to the First and Fourth Schedules while reorganising States?",
+    options: [
+      "Article 2",
+      "Article 3",
+      "Article 4",
+      "Article 368",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 4 allows laws made under Articles 2 and 3 to amend the First and Fourth Schedules and other supplemental, incidental and consequential provisions. Such laws are not treated as amendments under Article 368.",
+  },
+
+  {
+    id: 19,
+    section: "Union and its Territory",
+    question:
+      "Which constitutional procedure was considered necessary by the Supreme Court for the cession of Indian territory to a foreign country in the Berubari Union reference?",
+    options: [
+      "Ordinary legislation under Article 3",
+      "Executive order of the President",
+      "Constitutional amendment under Article 368",
+      "Resolution of the concerned State Legislature",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "In the Berubari Union reference, the Supreme Court held that cession of Indian territory to a foreign country required a constitutional amendment under Article 368.",
+  },
+
+  // 6. CITIZENSHIP
+  {
+    id: 20,
+    section: "Citizenship",
+    question:
+      "Which Article empowers Parliament to regulate the acquisition and termination of citizenship and all other matters relating to citizenship?",
+    options: [
+      "Article 5",
+      "Article 9",
+      "Article 10",
+      "Article 11",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 11 empowers Parliament to make laws regarding the acquisition and termination of citizenship and all other matters relating to citizenship.",
+  },
+
+  {
+    id: 21,
+    section: "Citizenship",
+    question:
+      "Which of the following is NOT a statutory mode of acquisition of Indian citizenship under the Citizenship Act, 1955?",
+    options: [
+      "Birth",
+      "Descent",
+      "Naturalisation",
+      "Election by a State Legislature",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Citizenship Act, 1955 provides for acquisition by birth, descent, registration, naturalisation and incorporation of territory. Election by a State Legislature is not a mode of citizenship acquisition.",
+  },
+
+  {
+    id: 22,
+    section: "Citizenship",
+    question:
+      "Under the Citizenship (Amendment) Act, 2019, the specified religious communities from which countries are covered by the special statutory pathway are:",
+    options: [
+      "Afghanistan, Bangladesh and Pakistan",
+      "Nepal, Bhutan and Sri Lanka",
+      "Myanmar, China and Bangladesh",
+      "Pakistan, Nepal and Myanmar",
+    ],
+    answer: 0,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The 2019 amendment covers specified Hindu, Sikh, Buddhist, Jain, Parsi and Christian communities from Afghanistan, Bangladesh and Pakistan, subject to statutory conditions including the relevant entry date.",
+  },
+
+  // 7. CONSTITUTIONAL AMENDMENT
+  {
+    id: 23,
+    section: "Constitutional Amendment",
+    question:
+      "A Constitution Amendment Bill is passed by the Lok Sabha but rejected by the Rajya Sabha. What happens?",
+    options: [
+      "A joint sitting can be called.",
+      "The President may approve the Bill.",
+      "The Bill fails because each House must pass it separately.",
+      "The Supreme Court decides which House has priority.",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Under Article 368, each House must separately pass the amendment Bill by the prescribed special majority. There is no provision for a joint sitting.",
+  },
+
+  {
+    id: 24,
+    section: "Constitutional Amendment",
+    question:
+      "Which of the following constitutional amendments requires ratification by at least half of the State Legislatures?",
+    options: [
+      "Changing the salaries of Members of Parliament",
+      "Changing the election procedure of the President",
+      "Changing the citizenship provisions",
+      "Changing the number of Lok Sabha members through ordinary legislation",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Changes relating to the election of the President require ratification by at least half of the State Legislatures under Article 368.",
+  },
+
+  {
+    id: 25,
+    section: "Constitutional Amendment",
+    question:
+      "Which Constitutional Amendment introduced the Anti-Defection Law?",
+    options: [
+      "42nd Amendment",
+      "44th Amendment",
+      "52nd Amendment",
+      "61st Amendment",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The 52nd Constitutional Amendment Act, 1985 introduced the Tenth Schedule, which contains the Anti-Defection Law.",
+  },
+
+  {
+    id: 26,
+    section: "Constitutional Amendment",
+    question:
+      "Which Article was inserted by the 101st Constitutional Amendment to provide for the GST Council?",
+    options: [
+      "Article 246A",
+      "Article 269A",
+      "Article 279A",
+      "Article 280",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 279A provides for the establishment of the GST Council. Article 246A provides special legislative powers relating to GST.",
+  },
+
+  // 8. BASIC STRUCTURE
+  {
+    id: 27,
+    section: "Basic Structure",
+    question:
+      "Which judgment established the doctrine that Parliament cannot alter the basic structure of the Constitution through its amending power?",
+    options: [
+      "Shankari Prasad",
+      "Golaknath",
+      "Kesavananda Bharati",
+      "Sajjan Singh",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Kesavananda Bharati judgment of 1973 established that Parliament can amend any part of the Constitution but cannot destroy its basic structure.",
+  },
+
+  {
+    id: 28,
+    section: "Basic Structure",
+    question:
+      "Which of the following is NOT generally recognised as an element of the Basic Structure?",
+    options: [
+      "Judicial review",
+      "Supremacy of the Constitution",
+      "Free and fair elections",
+      "Unlimited amending power of Parliament",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Parliament's amending power is limited. Unlimited amending power would contradict the Basic Structure doctrine.",
+  },
+
+  {
+    id: 29,
+    section: "Basic Structure",
+    question:
+      "In which case did the Supreme Court reaffirm the limited amending power of Parliament and the need for harmony between Fundamental Rights and Directive Principles?",
+    options: [
+      "Minerva Mills v. Union of India",
+      "A.K. Gopalan v. State of Madras",
+      "Berubari Union Case",
+      "Kihoto Hollohan Case",
+    ],
+    answer: 0,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "In Minerva Mills (1980), the Supreme Court held that limited amending power and harmony between Parts III and IV are essential features of the Basic Structure.",
+  },
+
+  // 9. FUNDAMENTAL RIGHTS
+  {
+    id: 30,
+    section: "Fundamental Rights",
+    question:
+      "A government-controlled corporation violates an individual's Fundamental Right. Which constitutional definition becomes relevant in determining whether that corporation falls within the meaning of 'State'?",
+    options: [
+      "Article 12",
+      "Article 14",
+      "Article 19",
+      "Article 32",
+    ],
+    answer: 0,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 12 defines the term State for the purposes of Part III. Courts examine factors such as governmental control, financial support and the nature of the body's functions.",
+  },
+
+  {
+    id: 31,
+    section: "Fundamental Rights",
+    question:
+      "The doctrine of severability under Article 13 primarily means that:",
+    options: [
+      "An entire law must be struck down whenever one provision is unconstitutional.",
+      "Only the unconstitutional portion of a law may be invalidated if it can be separated from the valid portion.",
+      "Parliament can validate any unconstitutional law without amendment.",
+      "Fundamental Rights cannot be restricted under any circumstances.",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The doctrine of severability allows courts to preserve valid portions of legislation when the unconstitutional portion can be separated.",
+  },
+
+  {
+    id: 32,
+    section: "Fundamental Rights",
+    question:
+      "Which of the following Fundamental Rights is available to both citizens and foreign nationals?",
+    options: [
+      "Article 15",
+      "Article 16",
+      "Article 19",
+      "Article 21",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 21 protects the life and personal liberty of every person, not merely citizens. Articles 15, 16 and 19 are citizen-specific.",
+  },
+
+  {
+    id: 33,
+    section: "Fundamental Rights",
+    question:
+      "A classification under Article 14 is constitutionally valid when it satisfies which test?",
+    options: [
+      "Political majority and legislative approval",
+      "Intelligible differentia and rational nexus",
+      "Equal numerical representation and proportional voting",
+      "Presidential approval and judicial certification",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Reasonable classification under Article 14 requires an intelligible differentia distinguishing those grouped together from others, and a rational nexus with the object of the law.",
+  },
+
+  {
+    id: 34,
+    section: "Fundamental Rights",
+    question:
+      "Which of the following freedoms is NOT expressly mentioned as a separate freedom under Article 19(1)?",
+    options: [
+      "Freedom of speech and expression",
+      "Freedom to assemble peacefully",
+      "Freedom of the press",
+      "Freedom to form associations or unions",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Freedom of the press is not separately enumerated in Article 19(1). It has been recognised by the Supreme Court as part of freedom of speech and expression under Article 19(1)(a).",
+  },
+
+  {
+    id: 35,
+    section: "Fundamental Rights",
+    question:
+      "Which of the following protections under Article 20 cannot be suspended even during a National Emergency through an order under Article 359?",
+    options: [
+      "Protection against ex post facto criminal laws",
+      "Protection against double jeopardy",
+      "Protection against self-incrimination",
+      "All of the above",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 20 is protected from suspension of the right to move courts under Article 359. Article 21 also receives this protection.",
+  },
+
+  {
+    id: 36,
+    section: "Fundamental Rights",
+    question:
+      "The constitutional right to education for children between six and fourteen years is provided under:",
+    options: [
+      "Article 19A",
+      "Article 21A",
+      "Article 29A",
+      "Article 45A",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 21A was inserted by the 86th Constitutional Amendment Act, 2002. It provides for free and compulsory education for children aged six to fourteen years.",
+  },
+
+  {
+    id: 37,
+    section: "Fundamental Rights",
+    question:
+      "A person is illegally detained by a private individual. Which writ may be issued by a constitutional court to secure the person's release?",
+    options: [
+      "Mandamus",
+      "Certiorari",
+      "Habeas Corpus",
+      "Quo Warranto",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Habeas Corpus protects against unlawful detention and can be issued against private individuals as well as public authorities in appropriate cases.",
+  },
+
+  {
+    id: 38,
+    section: "Fundamental Rights",
+    question:
+      "Which of the following best distinguishes Article 32 from Article 226?",
+    options: [
+      "Article 32 is available only to State Governments.",
+      "Article 226 can be invoked only for Fundamental Rights.",
+      "Article 226 has wider scope because it can be used for Fundamental Rights and other legal purposes.",
+      "Article 32 is not part of the Constitution.",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 32 is itself a Fundamental Right and is used to enforce Fundamental Rights. Article 226 gives High Courts wider writ jurisdiction for Fundamental Rights and other purposes.",
+  },
+
+  {
+    id: 39,
+    section: "Fundamental Rights",
+    question:
+      "Which Constitutional Amendment removed the Right to Property from the list of Fundamental Rights?",
+    options: [
+      "24th Amendment",
+      "42nd Amendment",
+      "44th Amendment",
+      "52nd Amendment",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The 44th Amendment removed Articles 19(1)(f) and 31 from Part III and inserted Article 300A, making the right to property a constitutional right rather than a Fundamental Right.",
+  },
+
+  {
+    id: 40,
+    section: "Fundamental Rights",
+    question:
+      "Which landmark judgment recognised privacy as a constitutionally protected Fundamental Right?",
+    options: [
+      "A.K. Gopalan v. State of Madras",
+      "K.S. Puttaswamy v. Union of India",
+      "Shankari Prasad v. Union of India",
+      "S. R. Bommai v. Union of India",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The nine-judge bench in K.S. Puttaswamy v. Union of India (2017) unanimously recognised the right to privacy as a Fundamental Right protected by the Constitution.",
+  },
+
+  // 10. DIRECTIVE PRINCIPLES
+  {
+    id: 41,
+    section: "Directive Principles of State Policy",
+    question:
+      "Which Article declares that Directive Principles are not enforceable by any court but are fundamental in the governance of the country?",
+    options: [
+      "Article 32",
+      "Article 36",
+      "Article 37",
+      "Article 39",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 37 makes Directive Principles non-justiciable while declaring them fundamental in the governance of the country.",
+  },
+
+  {
+    id: 42,
+    section: "Directive Principles of State Policy",
+    question:
+      "Which Directive Principle specifically provides for equal justice and free legal aid?",
+    options: [
+      "Article 38",
+      "Article 39A",
+      "Article 40",
+      "Article 44",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 39A directs the State to ensure equal justice and provide free legal aid so that opportunities for securing justice are not denied because of economic or other disabilities.",
+  },
+
+  {
+    id: 43,
+    section: "Directive Principles of State Policy",
+    question:
+      "The 2024 Supreme Court judgment in Property Owners Association v. State of Maharashtra primarily examined the interpretation of which constitutional provision?",
+    options: [
+      "Article 39(a)",
+      "Article 39(b)",
+      "Article 40",
+      "Article 44",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The judgment examined Article 39(b), particularly the meaning of material resources of the community and whether privately owned resources can fall within its scope.",
+  },
+
+  {
+    id: 44,
+    section: "Directive Principles of State Policy",
+    question:
+      "Which of the following Articles directs the State to organise village panchayats?",
+    options: [
+      "Article 39",
+      "Article 40",
+      "Article 43",
+      "Article 48",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 40 directs the State to organise village panchayats and endow them with powers and authority necessary to function as units of self-government.",
+  },
+
+  // 11. FUNDAMENTAL DUTIES
+  {
+    id: 45,
+    section: "Fundamental Duties",
+    question:
+      "Fundamental Duties were incorporated into the Indian Constitution on the recommendation of which committee?",
+    options: [
+      "Sarkaria Commission",
+      "Swaran Singh Committee",
+      "Balwant Rai Mehta Committee",
+      "Punchhi Commission",
+    ],
+    answer: 1,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The Swaran Singh Committee recommended the inclusion of Fundamental Duties. They were introduced through the 42nd Constitutional Amendment Act, 1976.",
+  },
+
+  {
+    id: 46,
+    section: "Fundamental Duties",
+    question:
+      "Which Constitutional Amendment added the eleventh Fundamental Duty relating to the education of children?",
+    options: [
+      "42nd Amendment",
+      "44th Amendment",
+      "73rd Amendment",
+      "86th Amendment",
+    ],
+    answer: 3,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "The 86th Constitutional Amendment inserted Article 51A(k), making it a duty of parents or guardians to provide opportunities for education to children between six and fourteen years.",
+  },
+
+  {
+    id: 47,
+    section: "Fundamental Duties",
+    question:
+      "Which of the following is NOT expressly listed as a Fundamental Duty under Article 51A?",
+    options: [
+      "Developing scientific temper and humanism",
+      "Safeguarding public property",
+      "Participating in every election",
+      "Protecting the natural environment",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "Article 51A expressly includes scientific temper, protection of the environment and safeguarding public property. Voting in every election is not expressly listed as a Fundamental Duty.",
+  },
+
+  // 12. INTEGRATED CONSTITUTIONAL ANALYSIS
+  {
+    id: 48,
+    section: "Integrated Constitutional Analysis",
+    question:
+      "A National Emergency is proclaimed exclusively on the ground of armed rebellion. Which statement correctly describes the operation of Article 358?",
+    options: [
+      "Article 358 automatically suspends all Fundamental Rights.",
+      "Article 358 automatically suspends Article 19.",
+      "Article 358 does not operate because the Emergency is not based on war or external aggression.",
+      "Article 358 applies only after approval by every State Legislature.",
+    ],
+    answer: 2,
+    marks: 1,
+    negativeMarks: 0.25,
+    explanation:
+      "After the 44th Amendment, Article 358 applies only when a National Emergency is proclaimed on the grounds of war or external aggression, not armed rebellion.",
+  },
+
   {
     id: 49,
-    section: "Applied Geography",
-    question: "A region shows high annual rainfall but recurrent agricultural drought. Which explanation is most plausible?",
-    options: ["Annual rainfall totals alone guarantee adequate soil moisture", "Rainfall is concentrated in a few intense events, with long intra-seasonal dry spells, runoff and limited storage", "High rainfall eliminates evapotranspiration", "Drought can occur only in regions with less than 250 mm annual rainfall"],
+    section: "Integrated Constitutional Analysis",
+    question:
+      "Which of the following correctly describes the constitutional significance of the S. R. Bommai judgment?",
+    options: [
+      "It abolished the office of Governor.",
+      "It established important limitations and judicial review concerning the use of Article 356.",
+      "It introduced the Basic Structure doctrine.",
+      "It declared the Preamble non-constitutional.",
+    ],
     answer: 1,
     marks: 1,
     negativeMarks: 0.25,
-    explanation: "Agricultural drought depends on timing, intensity, soil storage and evaporative demand, not merely annual rainfall totals."
+    explanation:
+      "In S. R. Bommai v. Union of India (1994), the Supreme Court held that a proclamation under Article 356 is subject to judicial review and laid down important principles governing President's Rule.",
   },
+
   {
     id: 50,
-    section: "Applied Geography",
-    question: "Which combination would most likely produce a strong urban heat island at night?",
-    options: ["High vegetation cover, low building density and high albedo", "Dense built surfaces with high heat storage, low vegetation and restricted sky-view factors", "Rural surroundings with high soil moisture and open skies only", "High daytime cloud cover and persistent strong winds"],
-    answer: 1,
+    section: "Integrated Constitutional Analysis",
+    question:
+      "A State Legislature enacts a law on a Concurrent List subject that conflicts with an earlier Parliamentary law. The State law has received Presidential assent. Under which constitutional provision may the State law prevail within that State, subject to Parliament's power to override it later?",
+    options: [
+      "Article 246",
+      "Article 249",
+      "Article 254(2)",
+      "Article 368",
+    ],
+    answer: 2,
     marks: 1,
     negativeMarks: 0.25,
-    explanation: "Urban materials store daytime heat and release it at night; low vegetation and restricted radiative cooling intensify the effect."
+    explanation:
+      "Article 254(2) provides that a State law on a Concurrent List matter may prevail within that State if it has received Presidential assent, notwithstanding an earlier Parliamentary law. Parliament can subsequently override it by enacting another law.",
   },
 ];
 
